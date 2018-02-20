@@ -11,13 +11,31 @@
 <body>
 <% 
 JDBCVilleDAO connection = new JDBCVilleDAO();
-Ville ville = new Ville("blois","depsss");
-//connection.select();
+String nom =request.getParameter("nom");  
+String departement =request.getParameter("departement");
+
+
+Ville ville = new Ville(nom,departement);
+
 connection.insert(ville);
+connection.select();
 connection.closeConnection();
 
   
  %>
+ 
+<form action="index.jsp" method="post">
+
+<p>
+
+    <input type="text" name="nom" />
+    <input type="text" name="departement" />
+
+    <input type="submit" value="Valider" />
+
+</p>
+
+</form>
   <table border="0" cellpadding="10">
       <tr>
         <td>
