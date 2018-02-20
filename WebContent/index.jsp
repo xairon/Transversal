@@ -11,7 +11,7 @@
 <body>
 <% 
 JDBCVilleDAO connection = new JDBCVilleDAO();
-Ville ville = new Ville("blois","deps");
+Ville ville = new Ville("blois","depsss");
 //connection.select();
 connection.insert(ville);
 connection.closeConnection();
