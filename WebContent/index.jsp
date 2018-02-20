@@ -9,9 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% JDBCVilleDAO connection = new JDBCVilleDAO();
-Ville ville = new Ville("blois","dep");
-connection.getConnection();
+<% 
+JDBCVilleDAO connection = new JDBCVilleDAO();
+Ville ville = new Ville("blois","deps");
 //connection.select();
 connection.insert(ville);
 connection.closeConnection();
