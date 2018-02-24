@@ -23,7 +23,9 @@ connection.closeConnection();
 
   
  %>
- 
+ <form method="POST" action=login.jsp>
+<input type="submit" name="login" value="login" >
+</form>
 <form action="index.jsp" method="post">
 
 <p>
@@ -36,16 +38,11 @@ connection.closeConnection();
 </p>
 
 </form>
-  <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <img src="images/springsource.png">
-        </td>
-        <td>
-          <h1>Sample "Hello, World" Application</h1>
-        </td>
-      </tr>
-    </table>
+<form action="login.jsp" method="post">
+
+
+</form>
+ 
 
 </body>
 </html>

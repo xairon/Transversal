@@ -10,4 +10,12 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	 <servlet>
+        <servlet-name>connexion</servlet-name>
+        <servlet-class>transversal.Connexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connexion</servlet-name>
+        <url-pattern>/Connexion</url-pattern>
+    </servlet-mapping>
 </web-app>
