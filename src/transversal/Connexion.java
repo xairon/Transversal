@@ -11,19 +11,25 @@ public class Connexion extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-        String email = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        HttpSession session = request.getSession();
 
-        if(Validate.checkUser(email, pass))
+        String name = request.getParameter("user");
+        String pass = request.getParameter("pass");
+     
+        HttpSession session = request.getSession();
+  
+        if(Validate.checkUser(name, pass))
+        	
         {
-            RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
+        	request.getSession().setAttribute("co", 1);
+
+            RequestDispatcher rs = request.getRequestDispatcher("admin.jsp");
             rs.forward(request, response);
         }
         else
         {
-           out.println("Username or Password incorrect");
+        	
+        	request.getSession().setAttribute("erreur", 1);
+          
            RequestDispatcher rs = request.getRequestDispatcher("login.jsp");
            rs.include(request, response);
         }

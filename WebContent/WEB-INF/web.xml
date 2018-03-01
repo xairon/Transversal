@@ -10,6 +10,14 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<session-config>
+    <session-timeout>300</session-timeout>
+ </session-config>
+	    	 <servlet>  
+     <servlet-name>AdminServlet</servlet-name>  
+    <servlet-class>transversal.AdminServlet</servlet-class>  
+  </servlet>  
+
 	 <servlet>
         <servlet-name>connexion</servlet-name>
         <servlet-class>transversal.Connexion</servlet-class>
@@ -18,4 +26,8 @@
         <servlet-name>connexion</servlet-name>
         <url-pattern>/Connexion</url-pattern>
     </servlet-mapping>
+          <servlet-mapping>  
+    <servlet-name>AdminServlet</servlet-name>  
+    <url-pattern>/AdminServlet</url-pattern>  
+  </servlet-mapping>  
 </web-app>
