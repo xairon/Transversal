@@ -10,7 +10,7 @@
   <meta charset="utf-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
-    
+    <script src="js/echarts.min.js"></script> 
 
 </head>
 <body>
@@ -29,6 +29,34 @@
 </nav>  
 
  <div class="container">  
+  <div id="main" style="width: 600px;height:400px;"></div>
+   <script type="text/javascript">
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+            title: {
+                text: 'ECharts entry example'
+            },
+            tooltip: {},
+            legend: {
+                data:['Sales']
+            },
+            xAxis: {
+                data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
+            },
+            yAxis: {},
+            series: [{
+                name: 'Sales',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
  <% 
 JDBCVilleDAO connection = new JDBCVilleDAO();
 String nom =request.getParameter("nom");  
@@ -55,7 +83,8 @@ connection.closeConnection();
 </p>
 
 </form>
-</div>  
+</div>
+<!--  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
  
