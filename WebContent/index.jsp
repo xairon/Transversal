@@ -37,7 +37,7 @@
         // specify chart configuration item and data
         var option = {
             title: {
-                text: 'ECharts entry example'
+                text: ' '
             },
             tooltip: {},
             legend: {
@@ -71,7 +71,7 @@ connection.closeConnection();
 
   
  %>
-<form action="index.jsp" method="post">
+<!--<form action="index.jsp" method="post">
 
 <p>
 
@@ -82,7 +82,7 @@ connection.closeConnection();
 
 </p>
 
-</form>
+</form>-->
 </div>
 <!--  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  

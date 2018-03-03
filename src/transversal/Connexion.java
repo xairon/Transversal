@@ -20,7 +20,7 @@ public class Connexion extends HttpServlet {
         if(Validate.checkUser(name, pass))
         	
         {
-        	request.getSession().setAttribute("co", 1);
+        	request.getSession().setAttribute("co", 2);
 
             RequestDispatcher rs = request.getRequestDispatcher("admin.jsp");
             rs.forward(request, response);
