@@ -16,7 +16,7 @@ public class Validate
          Connection con=DriverManager.getConnection
                         ("jdbc:mysql://localhost:3306/projet","root","root");
          PreparedStatement ps =con.prepareStatement
-                             ("select uname,pass from membres where uname=? and pass=?");
+                             ("select uname,pass from members where uname=? and pass=?");
          ps.setString(1, uname);
          ps.setString(2, pass);
          ResultSet rs =ps.executeQuery();

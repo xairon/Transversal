@@ -20,8 +20,7 @@
       <a class="navbar-brand" href="index.jsp">Plateforme</a>  
     </div>  
     <ul class="nav navbar-nav navbar-right">  
-      <li class="active"><a href="index.jsp">Accueil</a></li>  
-      <li><a href="AdminServlet">Admin</a></li>  
+ 
       
    
     </ul>  
