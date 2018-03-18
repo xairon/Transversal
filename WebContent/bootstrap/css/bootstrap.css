@@ -628,6 +628,8 @@ pre code {
 }
 
 .col {
+  background-color: lightgreen;
+  border: 2px solid black;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -webkit-box-flex: 1;

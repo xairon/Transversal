@@ -9,24 +9,59 @@
 <title>Accueil</title>  
   <meta charset="utf-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
-    <script src="js/echarts.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+    <script src="js/echarts.min.js"></script>
+    
 
 </head>
 <body>
+
+
+
 <nav class="navbar navbar-default">  
   <div class="container-fluid">  
-    <div class="navbar-header">  
-      <a class="navbar-brand" href="index.jsp">Plateforme</a>  
+    <div class="navbar-header">
+      <a class="navbar-brand" href="PagePrincipale">Nom</a>  
     </div>  
     <ul class="nav navbar-nav navbar-right">  
       <li class="active"><a href="index.jsp">Accueil</a></li>  
-      <li><a href="AdminServlet">Admin</a></li>   
-    
-   
-    </ul>  
+      <li><a href="AdminServlet">Admin</a></li> 
+    </ul>
   </div>  
 </nav>  
+
+<div class="container-fluid red">
+test
+</div>
+
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<article class="col-md-1 col-sm-12">
+				<h1>Article</h1>
+				<p>
+					ds m f k , sd l k fs l kn sd fn sd fn ev zj kf vh jksd jn kv nj gn qjn dj ndfb ns lj jnd fl
+ 				</p>
+			</article>
+			<article class="col-md-1 col-sm-12">
+				<h1>Article</h1>
+				<p>
+					ds m f k , sd l k fs l kn sd fn sd fn ev zj kf vh jksd jn kv nj gn qjn dj ndfb ns lj jnd fl 				</p>
+			</article>
+			<article class="col-md-1 col-sm-12">
+				<h1>Article</h1>
+				<p>
+					ds m f k , sd l k fs l kn sd fn sd fn ev zj kf vh jksd jn kv nj gn qjn dj ndfb ns lj jnd fl
+ 				</p>
+			</article>
+		</div>
+		
+			<button class="btn btn-default">test</button>
+		
+	</div>
+</div>
+
 
  <div class="container">  
   <div id="main" style="width: 600px;height:400px;"></div>
@@ -57,20 +92,7 @@
         // use configuration item and data specified to show chart
         myChart.setOption(option);
     </script>
- <% 
-JDBCVilleDAO connection = new JDBCVilleDAO();
-String nom =request.getParameter("nom");  
-String departement =request.getParameter("departement");
-
-
-Ville ville = new Ville(nom,departement);
-
-connection.insert(ville);
-connection.select();
-connection.closeConnection();
-
-  
- %>
+ 
 <!--<form action="index.jsp" method="post">
 
 <p>
