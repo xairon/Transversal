@@ -32,15 +32,109 @@
 
 
 
-	<div class="container blue">
-	truc
+
+	<div class="container-fluid fondEcr fill">
+		<div class="row">
+
+			<!-- partie formulaire -->
+
+			<div class="col-md-3 blue">
+
+				<!-- ligne des boutons -->
+				<div class="row">
+					<div class="col-md-6">
+						<a href="#" class="btn btn-primary btn-lg active" role="button"
+							aria-pressed="mixed">Comparer</a>
+					</div>
+
+					<div class="col-md-6">
+						<a href="#" class="btn btn-primary btn-lg active" role="button"
+							aria-pressed="mixed">Sélection</a>
+					</div>
+				</div>
+
+				<!-- ligne du formulaire -->
+				<div class="row">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapse1">Etudes</a>
+								</h4>
+							</div>
+							<div id="collapse1" class="panel-collapse collapse">
+								<div class="container formulaireContainer">
+									<div class="row">
+										<div class="checkbox">
+											<label> <input type="checkbox" value="">
+												pouet
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapse2">Population</a>
+								</h4>
+							</div>
+							<div id="collapse2" class="panel-collapse collapse">
+								<div class="container formulaireContainer">
+
+									<h5>Secteur</h5>
+
+
+									<div class="checkbox">
+										<label> <input type="checkbox" value="">Agricole
+										</label>
+									</div>
+									<div class="checkbox">
+										<label> <input type="checkbox" value="">Insustrie
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapse3">Autre</a>
+								</h4>
+							</div>
+							<div id="collapse3" class="panel-collapse collapse">
+								<div class="panel-body">blabla</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- partie affichage -->
+
+				<div class="col-md-9 yellow">
+					<div class="row"></div>
+
+					<div class="row"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+
+
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
