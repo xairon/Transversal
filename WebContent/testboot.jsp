@@ -25,11 +25,68 @@
   </div>  
 </nav>  
     
-<div class="container">  
-  <h3>Basic Navbar Example</h3>  
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>  
-</div>  
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <hr>
+
+          <form role="form" class="form-horizontal">
+            <fieldset>
+               <div class="form-group">
+                <label class="col-sm-4 control-label">Address</label>
+                <div class="col-sm-8">
+                  <input id="user_input_autocomplete_address" name="user_input_autocomplete_address"
+                         class="form-control" placeholder="Tapez ici le nom de la ville,région ou du département">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="disabled">
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>street_number</code></label>
+                <div class="col-sm-8">
+                  <input id="street_number" name="street_number" disabled="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>route</code></label>
+                <div class="col-sm-8">
+                  <input id="route" name="route" disabled="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>locality</code></label>
+                <div class="col-sm-8">
+                  <input id="locality" name="locality" disabled="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>administrative_area_level_1</code></label>
+                <div class="col-sm-8">
+                  <input id="administrative_area_level_1" name="administrative_area_level_1" disabled="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>postal_code</code></label>
+                <div class="col-sm-8">
+                  <input id="postal_code" name="postal_code" disabled="true" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"><code>country</code></label>
+                <div class="col-sm-8">
+                  <input id="country" name="country" disabled="true" class="form-control">
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places"></script>
+<script type="text/javascript" src="js/autocomplete.js"></script>
 </body>  
 </html>  
