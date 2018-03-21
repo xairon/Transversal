@@ -28,8 +28,8 @@
       <li class="active"><a href="index.jsp">Accueil</a></li>
       <li><a href="AdminServlet">Admin</a></li>
     </ul>
-  </div>  
-</nav>  
+  </div>
+</nav>
 
 <div class="container-fluid red">
 test

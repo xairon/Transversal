@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Territoire</a>
+		</h4>
+	</div>
+	<div id="collapse3" class="panel-collapse collapse">
+		<div class="container formulaireContainer">
+		
+		
+		
+		<h5>Orientation économique</h5>
+
+			<%
+			String [] listeOrientationEco = {
+					"Résidentiel",
+					"Urbain",
+					"Industriel",
+					"Agroalimentaire",
+					"Diversifié"
+					}; 
+					%>
+
+
+			<%
+			for (int i = 0 ; i < listeOrientationEco.length ; i++){ 
+			%>
+
+			<div class="checkbox">
+				<label> <input type="checkbox" value=""><%=listeOrientationEco[i] %>
+				</label>
+			</div>
+
+			<%} %>
+		
+		
+		
+		</div>
+	</div>
+</div>
