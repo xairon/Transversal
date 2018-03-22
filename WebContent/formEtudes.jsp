@@ -4,16 +4,36 @@
 			<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Etudes</a>
 		</h4>
 	</div>
-	<div id="collapse1" class="panel-collapse collapse">
+	<div id="collapse1" class="panel-collapse collapse grisClair">
 		<div class="container formulaireContainer">
 
-			<h5>Nombre d'étudiant</h5>
-			<p>slide</p>
-			
-			
-			<h5>Regroupement</h5>
 
-			<%String [] listeRegroupements = {
+
+			<div class="container margeSlider">
+			
+				<h5>Nombre d'étudiants</h5>
+
+				<input id="nbEtu" type="text"
+          data-provide="slider"
+          data-slider-ticks="[1, 2, 3]"
+          data-slider-ticks-labels='["peu", "moyennement", "beaucoup"]'
+          data-slider-min="1"
+          data-slider-max="3"
+          data-slider-step="1"
+          data-slider-value="2"
+          data-slider-tooltip="hide" />
+
+			</div>
+
+
+
+
+
+
+			<div class="row">
+				<h5>Regroupement</h5>
+
+				<%String [] listeRegroupements = {
 		"Université",
 		"Écoles paramédicales et sociales",
 		"Écoles juridiques et administratives",
@@ -31,36 +51,37 @@
 		"Établissement d'enseignement universitaires privés"
 		}; %>
 
-			<%
+				<%
 				for (int i = 0; i < listeRegroupements.length; i++) {
 			%>
-			<div class="checkbox">
-				<label> <input type="checkbox" value=""><%=listeRegroupements[i]%>
-				</label>
-			</div>
-			<%
+				<div class="checkbox">
+					<label> <input type="checkbox" value=""><%=listeRegroupements[i]%>
+					</label>
+				</div>
+				<%
 				}
 			%>
 
 
-			<h5>Secteur</h5>
+				<h5>Secteur</h5>
 
-<%
+				<%
 	String [] listeSecteursEtu = { "Public", "Privé" };
 %>
 
 
-			<%
+				<%
 				for (int i = 0; i < listeSecteursEtu.length; i++) {
 			%>
-			<div class="checkbox">
-				<label> <input type="checkbox" value=""><%=listeSecteursEtu[i]%>
-				</label>
-			</div>
-			<%
+				<div class="checkbox">
+					<label> <input type="checkbox" value=""><%=listeSecteursEtu[i]%>
+					</label>
+				</div>
+				<%
 				}
 			%>
 
+			</div>
 
 		</div>
 	</div>

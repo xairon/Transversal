@@ -1,20 +1,24 @@
-<!doctype html>
+   <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>jQuery UI Slider - Slider bound to select</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap/css/style.css">
-<script src="js/echarts.min.js"></script>
-<script src="bootstrap/js/bootstrap-slider.min.js"></script>
+  <!-- seiyria-bootstrap-slider Plugin -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
 
 </head>
 <body>
 
-	 <input id="ex21" type="text"
+
+
+
+<h5>Nombre d'étudiants</h5>
+
+				<input id="ex21" type="text"
           data-provide="slider"
           data-slider-ticks="[1, 2, 3]"
           data-slider-ticks-labels='["short", "medium", "long"]'
@@ -23,6 +27,5 @@
           data-slider-step="1"
           data-slider-value="3"
           data-slider-tooltip="hide" />
-
-</body>
-</html>
+</body>  
+</html> 

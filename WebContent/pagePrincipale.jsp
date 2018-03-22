@@ -6,20 +6,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Accueil</title>
+<title>page Principale</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/style.css">
+
+<!-- seiyria-bootstrap-slider Plugin -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
+
 <script src="js/echarts.min.js"></script>
+
+
+
 
 
 </head>
 <body>
 
 
-	<div class="navbar navbar-default">
+	<div class="navbar navbar-default margeZero">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="PagePrincipale">Nom</a>
@@ -33,59 +46,32 @@
 
 
 
-	<div class="container-fluid fondEcr fill">
-		<div class="row">
+	<div class="col-md-3">
 
-			<!-- partie formulaire -->
+		<%@include file="formulaire.jsp"%>
 
-			<div class="col-md-3 blue">
-
-				<!-- ligne des boutons -->
-				<div class="row">
-					<div class="col-md-6">
-						<a href="#" class="btn btn-primary btn-lg active" role="button"
-							aria-pressed="mixed">Comparer</a>
-					</div>
-
-					<div class="col-md-6">
-						<a href="#" class="btn btn-primary btn-lg active" role="button"
-							aria-pressed="mixed">Sélection</a>
-					</div>
-				</div>
-
-				<!-- ligne du formulaire -->
-				<div class="row">
-					<div class="panel-group" id="accordion">
-
-						<%@include file="formEtudes.jsp"%>
-
-						<%@include file="formPopulation.jsp"%>
-
-						<%@include file="formTerritoire.jsp"%>
-
-						<%@include file="formEntreprises.jsp"%>
-
-					</div>
-				</div>
-
-
-			</div>
-			<!-- partie affichage -->
-
-			<div class="col-md-9 yellow">
-				<div class="row">
-				partie gmap
-				</div>
-
-				<div class="row">
-				partie graphes
-				</div>
-			</div>
-		</div>
 	</div>
+
+	<div class="col-md-9 grisClair margeZero">
+
+		<%@include file="affichageHaut.jsp"%>
+
+		<%@include file="affichageBas.jsp"%>
+
+	</div>
+
+
+
+
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
+		async defer></script>
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
