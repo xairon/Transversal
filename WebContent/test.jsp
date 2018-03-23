@@ -60,16 +60,28 @@
     </style>
   </head>
   <body>
-    <input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location">
-    <div id="type-selector" class="controls">
-    
-     
+     <input id="origin-input" class="controls" type="text"
+        placeholder="Enter a first location">
+
+    <input id="destination-input" class="controls" type="text"
+        placeholder="Enter a second location">
+  
    
+    <div id="type-selector" class="controls">
+      <input type="radio" name="type" id="changetype-ville" checked="checked">
+      <label for="changetype-all">Ville</label>
+
+      <input type="radio" name="type" id="changetype-departement">
+      <label for="changetype-establishment">Département</label>
+
+      <input type="radio" name="type" id="changetype-region">
+      <label for="changetype-address">Region</label>
+
     </div>
+
     <div id="map"></div>
 
- <script type="text/javascript" src="js/autocomplete.js"></script>
+ <script type="text/javascript" src="js/autocompletes.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
         async defer></script>
   </body>

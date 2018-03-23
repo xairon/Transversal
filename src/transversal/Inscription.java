@@ -112,7 +112,7 @@ public class Inscription extends HttpServlet {
                 	rs.forward(request, response);
                 	session.invalidate();
              }
-        	 else if (motDePasse.trim().length() < 3 ||motDePasse.trim().length() > 20) {
+        	 else if (motDePasse.trim().length() < 3 ||motDePasse.trim().length() > 20 || motDePasse.contains(" ") || motDePasse.matches( "=+" )) {
         		 if (!motDePasse.equals(confirmation)) 
                     	session.setAttribute("erreurmdpconf", 2);
                	session.setAttribute("erreurmdp", 2);
