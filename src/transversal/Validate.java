@@ -14,7 +14,7 @@ public class Validate
 
  	 //creating connection with the database 
          Connection con=DriverManager.getConnection
-                        ("jdbc:mysql://localhost:3306/projet","root","root");
+                        ("jdbc:mysql://localhost:3306/projettrans","root","root");
          PreparedStatement ps =con.prepareStatement
                              ("select uname,pass from members where uname=? and pass=?");
          ps.setString(1, uname);

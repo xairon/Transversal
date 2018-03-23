@@ -6,20 +6,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Accueil</title>
+<title>page Principale</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+<link rel="stylesheet" href="bootstrap/css/stylemap.css">
+
+<!-- seiyria-bootstrap-slider Plugin -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
+
 <script src="js/echarts.min.js"></script>
+
+
+
 
 
 </head>
 <body>
 
 
-	<div class="navbar navbar-default">
+	<div class="navbar navbar-default margeZero">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="PagePrincipale">Nom</a>
@@ -33,108 +46,33 @@
 
 
 
-	<div class="container-fluid fondEcr fill">
-		<div class="row">
+	<div class="col-md-3">
 
-			<!-- partie formulaire -->
+		<%@include file="formulaire.jsp"%>
 
-			<div class="col-md-3 blue">
+	</div>
 
-				<!-- ligne des boutons -->
-				<div class="row">
-					<div class="col-md-6">
-						<a href="#" class="btn btn-primary btn-lg active" role="button"
-							aria-pressed="mixed">Comparer</a>
-					</div>
+	<div class="col-md-9 grisClair margeZero">
 
-					<div class="col-md-6">
-						<a href="#" class="btn btn-primary btn-lg active" role="button"
-							aria-pressed="mixed">Sélection</a>
-					</div>
-				</div>
+		<%@include file="affichageHaut.jsp"%>
 
-				<!-- ligne du formulaire -->
-				<div class="row">
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapse1">Etudes</a>
-								</h4>
-							</div>
-							<div id="collapse1" class="panel-collapse collapse">
-								<div class="container formulaireContainer">
-									<div class="row">
-										<div class="checkbox">
-											<label> <input type="checkbox" value="">
-												pouet
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapse2">Population</a>
-								</h4>
-							</div>
-							<div id="collapse2" class="panel-collapse collapse">
-								<div class="container formulaireContainer">
+		<%@include file="affichageBas.jsp"%>
 
-									<h5>Secteur</h5>
-
-
-									<div class="checkbox">
-										<label> <input type="checkbox" value="">Agricole
-										</label>
-									</div>
-									<div class="checkbox">
-										<label> <input type="checkbox" value="">Insustrie
-										</label>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion"
-										href="#collapse3">Autre</a>
-								</h4>
-							</div>
-							<div id="collapse3" class="panel-collapse collapse">
-								<div class="panel-body">blabla</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- partie affichage -->
-
-				<div class="col-md-9 yellow">
-					<div class="row"></div>
-
-					<div class="row"></div>
-				</div>
-			</div>
-		</div>
 	</div>
 
 
 
 
+	<script type="text/javascript" src="js/autocompletes.js"></script>
 
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
+		async defer></script>
 
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
