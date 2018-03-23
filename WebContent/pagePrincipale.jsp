@@ -1,3 +1,5 @@
+<%@page import="java.awt.Toolkit"%>
+<%@page import="java.awt.Dimension"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="transversal.*"%>
@@ -12,6 +14,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/stylemap.css">
+<link rel="stylesheet" href="bootstrap/css/stylepage.css">
 
 <!-- seiyria-bootstrap-slider Plugin -->
 <script
@@ -26,10 +29,9 @@
 
 
 
-
-
 </head>
 <body>
+
 
 
 	<div class="navbar navbar-default margeZero">
@@ -52,7 +54,7 @@
 
 	</div>
 
-	<div class="col-md-9 grisClair margeZero">
+	<div class="col-md-9 margeZero">
 
 		<%@include file="affichageHaut.jsp"%>
 

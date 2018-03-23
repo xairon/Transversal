@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
-	<div class="col-md-11">
+	<div class="col-md-10">
 
 		<div class="container">
-			<div id="histogramme" style="width: 600px; height: 400px;"></div>
+			<div id="histogramme" style="width: 500px; height: 400px;"></div>
 			<script type="text/javascript">
 				// based on prepared DOM, initialize echarts instance
 				var myChart = echarts.init(document
@@ -37,18 +37,17 @@
 
 	</div>
 
-	<div class="col-md-1">
+	<div class="col-md-2">
 
-			<div class="container containerCentrer">
-				<div class="row">
-					<a href="#" class="btn btn-primary btn-lg active" role="button"
-						aria-pressed="mixed">Histogramme</a>
-				</div>
+		<div class="container tailleRow">
+			<div class="row">
+				<a href="#" class="btn btn-primary btn-lg active boutonDroite"
+					role="button" aria-pressed="mixed">Histogramme</a>
+			</div>
 
-				<div class="row">
-					<a href="#" class="btn btn-primary btn-lg active" role="button"
-						aria-pressed="mixed">Camembert</a>
-				</div>
+			<div class="row">
+				<a href="#" class="btn btn-primary btn-lg active boutonDroite"
+					role="button" aria-pressed="mixed">Camembert</a>
 			</div>
 		</div>
 	</div>
