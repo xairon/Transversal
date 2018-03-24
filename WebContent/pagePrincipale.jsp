@@ -1,3 +1,5 @@
+<%@page import="java.awt.Toolkit"%>
+<%@page import="java.awt.Dimension"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="transversal.*"%>
@@ -11,7 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap/css/stylemap.css">
+
+<link rel="stylesheet" href="bootstrap/css/stylepage.css">
 
 <!-- seiyria-bootstrap-slider Plugin -->
 <script
@@ -26,10 +29,9 @@
 
 
 
-
-
 </head>
 <body>
+<body onload="initialize()">
 
 
 	<div class="navbar navbar-default margeZero">
@@ -52,7 +54,7 @@
 
 	</div>
 
-	<div class="col-md-9 grisClair margeZero">
+	<div class="col-md-9 margeZero">
 
 		<%@include file="affichageHaut.jsp"%>
 
@@ -63,7 +65,7 @@
 
 
 
-	<script type="text/javascript" src="js/autocompletes.js"></script>
+	<script type="text/javascript" src="js/initmap.js"></script>
 
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
