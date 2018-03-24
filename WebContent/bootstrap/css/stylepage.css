@@ -26,8 +26,8 @@
 	width: 200px;
 }
 
-.tailleRow{
-	width: 200px;
+.containerConnection{
+	width: 450px;
 }
 
 .fill {
@@ -39,6 +39,10 @@
 	padding-bottom: 10px;
 }
 
+.margeLeft{
+	margin-left: 10px;
+	padding-left: 10px;
+}
 
 .margeZero{
 	margin-bottom: 0px;

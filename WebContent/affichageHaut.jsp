@@ -14,7 +14,7 @@
 
 
 	<div class="col-md-2 margeZero">
-		<div class="container tailleRow">
+		<div class="container boutonDroite">
 			<div class="row">
 				<a href="#" class="btn btn-primary btn-lg active boutonDroite"
 					role="button" aria-pressed="mixed">Carte</a>
