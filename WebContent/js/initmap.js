@@ -105,7 +105,7 @@ function initialize2() {
 		      
 		      
 
-		        var autocomplete = new google.maps.places.Autocomplete(input2);
+		        var autocomplete = new google.maps.places.Autocomplete(input2,options);
 
 		            autocomplete.inputId = input2.id;
 		        
