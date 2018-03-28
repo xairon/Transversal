@@ -5,56 +5,44 @@
 		</h4>
 	</div>
 	<div id="collapse2" class="panel-collapse collapse grisClair">
-		<div class="container formulaireContainer">
+		<div class="container formulaireContainer ajusteAuto">
 
 
 
-		<div class="container margeSlider">
-			
+			<div class="container margeSlider ajusteAuto">
+
 				<h5>Densité de la population</h5>
-				<input id="densitePop" type="text"
-          data-provide="slider"
-          data-slider-ticks="[1, 2, 3]"
-          data-slider-ticks-labels='["faible", "moyenne", "forte"]'
-          data-slider-min="1"
-          data-slider-max="3"
-          data-slider-step="1"
-          data-slider-value="2"
-          data-slider-tooltip="hide" />
+				<input id="densitePop" type="text" name="densitePop" data-provide="slider"
+					data-slider-ticks="[1, 2, 3]"
+					data-slider-ticks-labels='["faible", "moyenne", "forte"]'
+					data-slider-min="1" data-slider-max="3" data-slider-step="1"
+					data-slider-value="2" data-slider-tooltip="hide" />
 
 			</div>
-			
-			
-			
-			<div class="container margeSlider">
-				
+
+
+
+			<div class="container margeSlider ajusteAuto">
+
 				<h5>Croissance de la population</h5>
-				<input id="croissancePop" type="text"
-          data-provide="slider"
-          data-slider-ticks="[1, 2, 3]"
-          data-slider-ticks-labels='["faible", "moyenne", "forte"]'
-          data-slider-min="1"
-          data-slider-max="3"
-          data-slider-step="1"
-          data-slider-value="2"
-          data-slider-tooltip="hide" />
+				<input id="croissancePop" type="text" name="croissancePop" data-provide="slider"
+					data-slider-ticks="[1, 2, 3]"
+					data-slider-ticks-labels='["faible", "moyenne", "forte"]'
+					data-slider-min="1" data-slider-max="3" data-slider-step="1"
+					data-slider-value="2" data-slider-tooltip="hide" />
 
 			</div>
-			
-			
-			
-			<div class="container margeSlider">
-			
+
+
+
+			<div class="container margeSlider ajusteAuto">
+
 				<h5>Taux de chômage</h5>
-				<input id="tauxChomage" type="text"
-          data-provide="slider"
-          data-slider-ticks="[1, 2, 3]"
-          data-slider-ticks-labels='["faible", "moyen", "fort"]'
-          data-slider-min="1"
-          data-slider-max="3"
-          data-slider-step="1"
-          data-slider-value="2"
-          data-slider-tooltip="hide" />
+				<input id="tauxChomage" type="text" name="tauxChomage" data-provide="slider"
+					data-slider-ticks="[1, 2, 3]"
+					data-slider-ticks-labels='["faible", "moyen", "fort"]'
+					data-slider-min="1" data-slider-max="3" data-slider-step="1"
+					data-slider-value="2" data-slider-tooltip="hide" />
 
 			</div>
 
@@ -79,10 +67,7 @@
 			for (int i = 0 ; i < listeSecteursPop.length ; i++){ 
 			%>
 
-			<div class="checkbox">
-				<label> <input type="checkbox" value=""><%=listeSecteursPop[i] %>
-				</label>
-			</div>
+			<input type="checkbox" name="secteurPop" value=<%=listeSecteursPop[i] %>> <%=listeSecteursPop[i] %><br>
 
 			<%} %>
 

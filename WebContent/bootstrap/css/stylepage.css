@@ -1,3 +1,8 @@
+.ajusteAuto{
+	height: auto;
+	width: auto;
+}
+
 .grisFonce{
 	background-color: #4a4a4a;
 }
@@ -26,8 +31,15 @@
 	width: 200px;
 }
 
+.btn-primary{
+	width: 150px;
+}
+
 .containerConnection{
 	width: 450px;
+}
+.enColonne{
+	display: inline-block;
 }
 
 .fill {
@@ -65,5 +77,8 @@ html, body {
 }
 
 h5 {
+	height: auto;
+	width: auto;
 	font-weight: bold;
 }
+

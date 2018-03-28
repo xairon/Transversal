@@ -14,21 +14,28 @@
 
 <!-- ligne du formulaire -->
 <div class="row">
-	<div class="panel-group" id="accordion">
+	<form action="/action_page.php" method="get">
+		<div class="panel-group" id="accordion">
 
-		<%@include file="formEtudes.jsp"%>
+			<%@include file="formComparaison.jsp"%>
 
-		<%@include file="formPopulation.jsp"%>
+			<%@include file="formEtudes.jsp"%>
 
-		<%@include file="formTerritoire.jsp"%>
+			<%@include file="formPopulation.jsp"%>
 
-		<%@include file="formEntreprises.jsp"%>
+			<%@include file="formTerritoire.jsp"%>
 
-	</div>
+			<%@include file="formEntreprises.jsp"%>
+
+		</div>
+		
+		<div class="col-md-offset-7">
+			<input type="submit" value="Lancer la recherche">
+		</div>
+		
+	</form>
 </div>
 
-<div class="col-md-offset-10">
-<button>Lancer la recherche</button> 
-</div>
+
 
 

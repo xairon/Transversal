@@ -5,7 +5,7 @@
 		</h4>
 	</div>
 	<div id="collapse3" class="panel-collapse collapse grisClair">
-		<div class="container formulaireContainer">
+		<div class="container formulaireContainer ajusteAuto">
 		
 		
 		
@@ -26,11 +26,9 @@
 			for (int i = 0 ; i < listeOrientationEco.length ; i++){ 
 			%>
 
-			<div class="checkbox">
-				<label> <input type="checkbox" value=""><%=listeOrientationEco[i] %>
-				</label>
-			</div>
+			<input type="checkbox" name="orientationEco" value=<%=listeOrientationEco[i] %>> <%=listeOrientationEco[i] %><br>
 
+		
 			<%} %>
 		
 		

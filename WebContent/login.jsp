@@ -32,17 +32,20 @@
 	</div>
 	</nav>
 
-	<div class="col-md-offset-5">
-		<h1>The site !!</h1>
+	<div class="col-md-offset-4">
+		<h1>Où étudier.com</h1>
 	</div>
 
-	<div class="row">
+	
 		<div class="col-sm-7">
 			<div class="Container margeLeft">
 				<h2>Bienvenue sur cette magnifique plateforme</h2>
 				<h4>Etudiant, futur entrepreneur, curieux ? Ce site est fait
 					pour vous.</h4>
-
+				<br /> <br /> <br /> <br />
+				<div class="col-sm-offset-3">
+					<img src="images/truc.jpg" alt="fgh" height=auto width=auto>
+				</div>
 			</div>
 		</div>
 
@@ -92,6 +95,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 </body>
 </html>

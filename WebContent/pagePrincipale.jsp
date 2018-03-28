@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap/css/stylemap.css">
+
 <link rel="stylesheet" href="bootstrap/css/stylepage.css">
 
 <!-- seiyria-bootstrap-slider Plugin -->
@@ -22,6 +22,8 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css"
 	rel="stylesheet">
+	
+
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
 
@@ -31,7 +33,7 @@
 
 </head>
 <body>
-
+<body onload="initialize()">
 
 
 	<div class="navbar navbar-default margeZero">
@@ -40,7 +42,7 @@
 				<a class="navbar-brand" href="PagePrincipale">Nom</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="index.jsp">Déconnexion</a></li>
+				<li><a href="login.jsp">Déconnexion</a></li>
 			</ul>
 		</div>
 	</div>
@@ -64,12 +66,11 @@
 
 
 
+<script type="text/javascript" src="js/initmap.js"></script>
 
-	<script type="text/javascript" src="js/autocompletes.js"></script>
-
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
-		async defer></script>
+ <script src="http://maps.google.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap" 
+          type="text/javascript"></script>
+	
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
