@@ -1,66 +1,47 @@
- // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+function diagramme(){
+      
+        var value =[];
+        var name =[];
 
-      function initMap() {
-    		map = new google.maps.Map(document.getElementById('map'), {
-    		     center: {lat: 48.862725, lng: 2.287592000000018},
-    	         zoom: 6
-        });
-
-        new AutocompleteDirectionsHandler(map);
-      }
-
-       /**
-        * @constructor
-       */
-      function AutocompleteDirectionsHandler(map) {
-        this.map = map;
-        this.originPlaceId = null;
-        this.destinationPlaceId = null;
-   
-        var originInput = document.getElementById('origin-input');
-        var destinationInput = document.getElementById('destination-input');
-
-        this.directionsService = new google.maps.DirectionsService;
-        this.directionsDisplay = new google.maps.DirectionsRenderer;
-        this.directionsDisplay.setMap(map);
-
-        var originAutocomplete = new google.maps.places.Autocomplete(
-            originInput, {placeIdOnly: true});
-        var destinationAutocomplete = new google.maps.places.Autocomplete(
-            destinationInput, {placeIdOnly: true});
-
-    
-
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
-
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
- 
-      }
-
-      // Sets a listener on a radio button to change the filter type on Places
-      // Autocomplete.
-   
-
-      AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
-        var me = this;
-        autocomplete.bindTo('bounds', this.map);
-        autocomplete.addListener('place_changed', function() {
-          var place = autocomplete.getPlace();
-          if (!place.place_id) {
-            window.alert("Please select an option from the dropdown list.");
-            return;
-          }
-          if (mode === 'ORIG') {
-            me.originPlaceId = place.place_id;
-          } else {
-            me.destinationPlaceId = place.place_id;
-          }
-          me.route();
-        });
-
+        value.push(0);
+        value.push(40);
+        value.push(70);
+        value.push(50);
+        value.push(30);
        
-      };
+        name.push('toto');
+        name.push('titi');
+        name.push('tyty');
+        name.push('tete');
+        name.push('tvtv');
+        
+        var config = {
+        		  type: 'bar',
+        		  data: {
+        		    labels: ["January"],
+        		    datasets: [{
+        		      label: "My First dataset",
+        		      data: [65],
+        		      fill: false
+        		    }]
+        		  }
+        		};
+
+        		var ctx = document.getElementById("histogramme");
+        		var myChart = new Chart(ctx, config);
+
+        		setTimeout(function(){
+        			for(var i = 0;i<value.length;i++){
+        			config.data.datasets[0].data.push(value[i]);}
+        			for(var j = 0;j<name.length;j++){
+        		  config.data.labels.push(name[j]);
+        			}
+        		  myChart.update();
+        		}, 1000)
+}
+function hide() {
+    document.getElementById("pac-input2").disabled = true;
+}
+function show() {
+    document.getElementById("pac-input2").disabled = false;
+}

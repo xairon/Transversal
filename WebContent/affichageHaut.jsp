@@ -3,14 +3,40 @@
 
 	<input id="pac-input" class="controls" type="text"
         placeholder="Enter a location">	
-            <input id="pac-input2" class="controls" type="text"
-        placeholder="Enter a location">	
+            <input id="pac-input2" class="controls" type="text" disabled
+        placeholder="Enter a  second location">	
 	
 	  <div id="map" style="width: 500px; height: 400px;"></div>
 
 	</div>
 
-
+<div class="container">
+	<div class="row">
+		<h2>Table fixed row header</h2>
+	</div>
+	
+	<table class="table table-fixed table-striped">
+	    <thead>
+	        <tr>
+	            <th>Row</th>
+	            <th>Firstname</th>
+	            <th>Lastname</th>
+	            <th>Age</th>
+	            <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Amin</td>
+                <td>Saffarnejad</td>
+                <td>27</td>
+                <td>Ahvaz</td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
 
 
 

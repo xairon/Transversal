@@ -7,6 +7,7 @@ function initMap() {
 	});
 
 }
+
 function initialize() {
 
 
@@ -20,10 +21,7 @@ function initialize() {
 	            	
 	      		  componentRestrictions: {country: 'fr'}
 	      		};
-	 
-	        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-	        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input2);
-	      
+
 	      
 
 	        var autocomplete = new google.maps.places.Autocomplete(input2,options);
