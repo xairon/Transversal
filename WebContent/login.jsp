@@ -40,9 +40,13 @@
 		<div class="col-sm-7">
 			<div class="Container margeLeft">
 				<h2>Bienvenue sur cette magnifique plateforme</h2>
-				<h4>Etudiant, futur entrepreneur, curieux ? Ce site est fait
-					pour vous.</h4>
-				<br /> <br /> <br /> <br />
+				<h4>Bonjour et bienvenue !
+					<br/>
+Famille, étudiants et enseignants nous avons la solution pour que vous puissiez trouver la ville idéale à votre situation. 
+Nous vous proposons une sélection des meilleures villes en France correspondant à vos désirs. Il existe également une fonctionnalité vous permettant de réaliser des comparatifs. Différents zonages et de nombreux critères sont accessibles, vous laissant une liberté durant vos recherches. 
+Grâce à une inscription, vous pourrez effectuer des recherches et visualiser les statistiques. Par la suite, vous aurez l'historique de votre dernière recherche. 
+Laissez-vous guider afin de trouver votre prochain lieux de vie, en adéquation avec vos désirs et exigences</h4>
+				<br /> <br />
 				<div class="col-sm-offset-3">
 					<img src="images/truc.jpg" alt="fgh" height=auto width=auto>
 				</div>

@@ -39,16 +39,14 @@
 					"Écoles juridiques et administratives",
 					"Écoles supérieures art et culture",
 					"École de commerce, gestion et comptabilité",
-					"Autres écoles de spécialités diverses",
-					"Autres formations ingénieurs",
+					"formations ingénieurs",
 					"Section de techniciens supérieurs et assimilés",
 					"Université de technologie",
 					"Grands établissement MENESR",
 					"Écoles normales supérieures",
 					"Instituts nationaux polytechniques",
 					"ESPE",
-					"Classes préparatoires aux grandes écoles (CPGE)",
-					"Établissement d'enseignement universitaires privés"
+					"Classes préparatoires aux grandes écoles (CPGE)"
 					}; 
 					%>
 

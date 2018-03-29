@@ -21,6 +21,7 @@ function initialize() {
 			componentRestrictions: {country: 'fr'}
 	};
 
+	// trucs à supprimer si tu veux bouger 
 	map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 	map.controls[google.maps.ControlPosition.TOP_LEFT].push(input2);
 
