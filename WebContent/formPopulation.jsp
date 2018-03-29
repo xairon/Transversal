@@ -14,7 +14,7 @@
 				<h5>Densité de la population</h5>
 				<input id="densitePop" type="text" name="densitePop" data-provide="slider"
 					data-slider-ticks="[1, 2, 3]"
-					data-slider-ticks-labels='["faible", "moyenne", "forte"]'
+					data-slider-ticks-labels='["faible", "moyeenne", "forte"]'
 					data-slider-min="1" data-slider-max="3" data-slider-step="1"
 					data-slider-value="2" data-slider-tooltip="hide" />
 
