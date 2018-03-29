@@ -27,8 +27,10 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
 
-<script src="js/echarts.min.js"></script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script type="text/javascript" src="js/testdouble.js"></script>
 
 
 </head>
@@ -68,9 +70,9 @@
 
 <script type="text/javascript" src="js/initmap.js"></script>
 
- <script src="http://maps.google.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap" 
-          type="text/javascript"></script>
-	
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
+		async defer></script>
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
