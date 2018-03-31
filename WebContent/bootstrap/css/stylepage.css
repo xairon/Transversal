@@ -4,8 +4,8 @@
 }
 
 .ajusteGraphe{
-	height: auto;
-	width: 350px;
+	
+	width: 50%;
 }
 
 .grisFonce{
@@ -46,7 +46,7 @@ thead th {
 
 tbody {
     overflow-y: auto;
-    height: 150px;
+    height: auto;
 }
 
 tbody td, thead th {

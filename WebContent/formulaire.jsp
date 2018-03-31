@@ -2,22 +2,14 @@
 <!-- ligne des boutons -->
 <div class="row">
 
-<div class="col-md-6">
-		<a id="selectionner" href="#" class="btn btn-primary btn-lg active" onclick="hide()" role="button"
-			aria-pressed="mixed">Sélection</a>
-	</div>
-	
-	<div class="col-md-6">
-		<a id="comparer" href="#" class="btn btn-primary btn-lg active" onclick="show()" role="button"
-			aria-pressed="mixed">Comparer</a>
-	</div>
+ 
 
-	
+
 </div>
 
 <!-- ligne du formulaire -->
 <div class="row">
-	<form action="/action_page.php" method="get">
+	<form action="#" method="get">
 		<div class="panel-group" id="accordion">
 
 			<%@include file="formEtudes.jsp"%>
@@ -29,16 +21,19 @@
 			<%@include file="formEntreprises.jsp"%>
 
 		</div>
-		
+
 		<div class="col-md-offset-7">
-			<input type="submit" value="Lancer la recherche">
+			<input type="submit" value="Lancer la recherche" onclick="test()">
 		</div>
-		
+
 	</form>
 </div>
 
 <div class="col-md-offset-7">
-<button id = "bouton" onclick="diagramme()" type="button" class="btn btn-primary">Lancer graphe</button>
+	<button id="bouton" onclick="diagramme()" type="button"
+		class="btn btn-primary">Lancer graphe</button>
+	<button id="bouton2" onclick="liste()" type="button"
+		class="btn btn-primary">Lancer Liste</button>
 </div>
 
 
