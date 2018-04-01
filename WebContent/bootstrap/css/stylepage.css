@@ -1,3 +1,8 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+	background-color: #e9ebee;
+}
+
 .ajusteAuto{
 	height: auto;
 	width: auto;
@@ -8,16 +13,8 @@
 	width: 50%;
 }
 
-.grisFonce{
-	background-color: #4a4a4a;
-}
-
-.gris{
-	background-color: gray;
-}
-
-.grisClair{
-	background-color: #b2b2b2;
+.interieurMenu{
+	background-color: #CDD1D8;
 }
 
 .blue {
@@ -99,11 +96,6 @@ tr:after {
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-top: 0px;
-}
-
-/* Optional: Makes the sample page fill the window. */
-html, body {
-	background-color: #b2b2b2;
 }
 
 .formulaireContainer {

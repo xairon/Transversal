@@ -4,7 +4,7 @@
 			<a data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvreEtudes()">Etudes</a>
 		</h4>
 	</div>
-	<div id="collapse1" class="panel-collapse collapse grisClair in">
+	<div id="collapse1" class="panel-collapse collapse interieurMenu in">
 		<div class="container formulaireContainer ajusteAuto">
 
 
@@ -79,7 +79,7 @@
 			Public<br>
 			<input type="checkbox" id="etudes-secteur-prive" name="etudes-secteur-prive"
 				value="Privé">
-			Public<br>
+			Privé<br>
 
 
 

@@ -83,16 +83,49 @@ function show() {
 	document.getElementById("pac-input2").disabled = false;
 }
 
+function comparaison(){
+	
+	if(document.getElementById("pac-input2").disabled){
+		document.getElementById("pac-input2").disabled = false;
+	}
+	else{
+		document.getElementById("pac-input2").disabled = true;
+	}
+}
+
+function comparaison2(){
+    if(document.getElementById("comparaison").checked)
+    	document.getElementById("pac-input2").disabled = false;
+    else
+    	document.getElementById("pac-input2").disabled = true;
+ }
+
+
+function decision(){
+	if(document.getElementById("decision").checked){
+		document.getElementById("justePrDecision").style.display = "none";
+		document.getElementById("comparer").style.display = "";
+	}
+    else{
+    	document.getElementById("justePrDecision").style.display = "";
+    	document.getElementById("comparer").style.display = "none";
+    }
+}
+
 
 /* liste <=> map */
 function afficheCarte(){
 	document.getElementById("containerListe").style.display = "none";
 	document.getElementById("containerCarte").style.display = "";
+	document.getElementById("selectionner").style.display = "";
+	document.getElementById("comparer").style.display = "";
 }
 
 function afficheListe(){
 	document.getElementById("containerListe").style.display = "";
 	document.getElementById("containerCarte").style.display = "none";
+	document.getElementById("selectionner").style.display = "none";
+	document.getElementById("comparer").style.display = "none";
 }
 
 

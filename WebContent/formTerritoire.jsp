@@ -4,7 +4,7 @@
 			<a data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvreTerritoire()">Territoire</a>
 		</h4>
 	</div>
-	<div id="collapse3" class="panel-collapse collapse grisClair in">
+	<div id="collapse3" class="panel-collapse collapse interieurMenu in">
 		<div class="container formulaireContainer ajusteAuto">
 		
 		
