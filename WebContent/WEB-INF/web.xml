@@ -20,18 +20,34 @@
 </servlet>
 	 <servlet>
         <servlet-name>inscription</servlet-name>
-        <servlet-class>transversal.Inscription</servlet-class>
+        <servlet-class>Inscription.Inscription</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletFormulaire</servlet-name>
+        <servlet-class>transversal.ServletFormulaire</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ServletAPIjs</servlet-name>
+        <servlet-class>transversal.ServletAPIjs</servlet-class>
     </servlet>
     
     
     <servlet-mapping>
+        <servlet-name>ServletAPIjs</servlet-name>
+        <url-pattern>/API</url-pattern>
+    </servlet-mapping> 
+      <servlet-mapping>
         <servlet-name>inscription</servlet-name>
         <url-pattern>/Inscription</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>
+        <servlet-name>ServletFormulaire</servlet-name>
+        <url-pattern>/ServletFormulaire</url-pattern>
     </servlet-mapping> 
 
 	 <servlet>
         <servlet-name>connexion</servlet-name>
-        <servlet-class>transversal.Connexion</servlet-class>
+        <servlet-class>Connexion.Connexion</servlet-class>
     </servlet>
     
     

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="out"></div>
+<script>
+function sendapi(){
+	var body; 
+	body = document.getElementById("tauxEmploi")+";"
+	+document.getElementById("Services")+";"
+	+document.getElementById("Commerce")+";"
+	+document.getElementById("Construction")+";"
+	+document.getElementById("Industrie")+";";
+
+	    let server_domain = 'localhost:8080';
+	    function doRequest(body, callback) {
+	        const url = "http://" + server_domain + "/trans/API";
+	        let xhr = new XMLHttpRequest();
+
+	        function internCallback() {
+	            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+	                callback(xhr.responseText);
+	            }
+	        }
+	        xhr.open('POST', url);
+	        xhr.onreadystatechange = internCallback;
+	        xhr.send(body);
+	    }
+	    function f(response) {
+	        diagramme(response);
+	        console.log(response);
+	        //liste(lesdonnéesjson)//appel de function diagramme avec lib gson et JSON.parse(response)
+	    }
+	 
+	    doRequest(body, f);
+	}
+</script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+<script type="text/javascript" src="js/initmap.js"></script>
 <link rel="stylesheet" href="bootstrap/css/stylepage.css">
 
 <!-- seiyria-bootstrap-slider Plugin -->
@@ -23,14 +23,16 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css"
 	rel="stylesheet">
 	
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
 
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script type="text/javascript" src="js/testdouble.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/scriptdiagramme.js"></script> 
 
 
 </head>
@@ -41,7 +43,7 @@
 	<div class="navbar navbar-default margeZero">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="PagePrincipale">Nom</a>
+				<a  class="navbar-brand" href="ServletFormulaire">Nom</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="login.jsp">Déconnexion</a></li>
@@ -68,7 +70,6 @@
 
 
 
-<script type="text/javascript" src="js/initmap.js"></script>
 
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"
@@ -79,5 +80,6 @@
 
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
 </body>
 </html>

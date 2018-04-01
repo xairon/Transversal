@@ -1,8 +1,10 @@
-package transversal;
+package DAO;
 
 import java.util.List;
+
+import DAO.Member;
+
 import java.util.Date;
-import transversal.Member;
 public interface MemberDAO{
 	Member load(final Long id) throws Exception;
 

@@ -1,8 +1,9 @@
-package transversal;
+package Connexion;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+
 import java.sql.*;
 
 public class Connexion extends HttpServlet {

@@ -2,9 +2,10 @@
 
 	<div class="col-md-10">
 		<div class="container-fluid">
-			<input id="pac-input" class="controls" type="text"
-				placeholder="Enter a location"> <input id="pac-input2"
-				class="controls" type="text" disabled
+			<input id="pac-input" class="controls" name="ville1" type="text"
+				placeholder="Enter a location"> 
+				<input id="pac-input2"
+				class="controls" name = "ville2"  type="text" disabled
 				placeholder="Enter a  second location">
 
 			<div id="map" style="width: auto; height: 400px;"></div>

@@ -11,13 +11,14 @@
 		<a id="comparer" href="#" class="btn btn-primary btn-lg active" onclick="show()" role="button"
 			aria-pressed="mixed">Comparer</a>
 	</div>
-
+<div id = ville1 value ></div>
+<div id = ville2 value ></div>
 	
 </div>
 
 <!-- ligne du formulaire -->
 <div class="row">
-	<form action="/action_page.php" method="get">
+	
 		<div class="panel-group" id="accordion">
 
 			<%@include file="formEtudes.jsp"%>
@@ -30,15 +31,17 @@
 
 		</div>
 		
-		<div class="col-md-offset-7">
-			<input type="submit" value="Lancer la recherche">
-		</div>
 		
-	</form>
 </div>
 
 <div class="col-md-offset-7">
-<button id = "bouton" onclick="diagramme()" type="button" class="btn btn-primary">Lancer graphe</button>
+<form method="POST" onclick="sendapi()" action="javascript:void(0)" accept-charset="UTF-8">
+					
+						<button type="submit" name="submit" class="btn btn-info btn-block">Lancer</button>
+						
+					</form>
+					<div id="out"></div>
+
 </div>
 
 

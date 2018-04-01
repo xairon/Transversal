@@ -1,4 +1,4 @@
-package transversal;
+package Connexion;
 
 import java.sql.*;
 

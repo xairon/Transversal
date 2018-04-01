@@ -19,7 +19,10 @@ function initialize() {
  
 	        var options = {
 	            	
-	      		  componentRestrictions: {country: 'fr'}
+	        		 types: ['(cities)'],
+	        		  componentRestrictions: {country: 'fr'}
+
+	        
 	      		};
 
 	      
@@ -43,7 +46,9 @@ function initialize() {
 	          infowindow.close();
 	          marker.setVisible(false);
 	          var place = autocomplete.getPlace();
-	          
+	          var name = place.name;
+	          console.log(name);
+	          document.getElementById('ville1').value= name;
 	          if (!place.geometry) {
 	            // User entered the name of a Place that was not suggested and
 	            // pressed the Enter key, or the Place Details request failed.
@@ -95,7 +100,9 @@ function initialize2() {
 	 
 		        var options = {
 		            	
-		      		  componentRestrictions: {country: 'fr'}
+		        		 types: ['(cities)'],
+		        		  componentRestrictions: {country: 'fr'}
+
 		      		};
 		 
 		   
@@ -122,7 +129,10 @@ function initialize2() {
 		          infowindow.close();
 		          marker.setVisible(true);
 		          var place = autocomplete.getPlace();
-		          
+		          var name = place.name;
+		       
+		          console.log(name);
+		          document.getElementById('ville2').value= name;
 		          if (!place.geometry) {
 		            // User entered the name of a Place that was not suggested and
 		            // pressed the Enter key, or the Place Details request failed.
