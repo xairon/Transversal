@@ -4,18 +4,18 @@ var body = "request1"+";"
 +document.getElementById("pac-input").value+";"
 +document.getElementById("pac-input2").value+";"
 +document.getElementById("entreprise-emploi").value+";"
-+document.getElementById("Services").checked+";"
-+document.getElementById("Commerce").checked+";"
-+document.getElementById("Construction").checked+";"
-+document.getElementById("Industrie").checked+";"
++document.getElementById("entreprise-secteur-Services").checked+";"
++document.getElementById("entreprise-secteur-Commerce").checked+";"
++document.getElementById("entreprise-secteur-Construction").checked+";"
++document.getElementById("entreprise-secteur-Industrie").checked+";"
 
 +document.getElementById("pac-input").name+";"
 +document.getElementById("pac-input2").name+";"
 +document.getElementById("entreprise-emploi").name+";"
-+document.getElementById("Services").value+";"
-+document.getElementById("Commerce").value+";"
-+document.getElementById("Construction").value+";"
-+document.getElementById("Industrie").value+";";
++document.getElementById("entreprise-secteur-Services").value+";"
++document.getElementById("entreprise-secteur-Commerce").value+";"
++document.getElementById("entreprise-secteur-Construction").value+";"
++document.getElementById("entreprise-secteur-Industrie").value+";";
 
     let server_domain = 'localhost:8080';
     function doRequest(body, callback) {
@@ -32,7 +32,7 @@ var body = "request1"+";"
         xhr.send(body);
     }
     function f(response) {
-    	//liste(response);
+    	liste(response);
         diagramme(response);
     
         //liste(lesdonnéesjson)//appel de function diagramme avec lib gson et JSON.parse(response)

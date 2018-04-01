@@ -1,53 +1,33 @@
 <div class="container-fluid margeZero">
 
-	<div class="col-md-10">
-		<div class="container-fluid">
-			<input id="pac-input" class="controls" name="ville1" type="text"
-				placeholder="Enter a location"> 
-				<input id="pac-input2"
-				class="controls" name = "ville2"  type="text" disabled
-				placeholder="Enter a  second location">
+		<!-- les  boutons selectionner et comparer, j'ai pas supprimé parce que ce que je vais peut ne pas convenir.. à voir..
+		<a id="selectionner" href="#" class="btn btn-primary btn-lg active"	onclick="hide()" role="button" aria-pressed="mixed">Sélection</a> 
+		<a id="comparer" href="#" class="btn btn-primary btn-lg active" onclick="comparaison()" role="button" aria-pressed="mixed">Comparer</a> 
+  		-->
+  		
+  		
+  		
+		<a href="#" class="btn btn-primary btn-lg active pull-right boutonDroite" onclick="afficheCarte()" role="button" aria-pressed="mixed">Carte</a> 
+		<a href="#"	class="btn btn-primary btn-lg active pull-right boutonDroite" onclick="afficheListe()" role="button" aria-pressed="mixed">Liste</a>
+		
+		
+	<div class="container-fluid" id="containerCarte">
+	<input id="comparaison" type="checkbox" onchange="comparaison2()" data-on="Comparaison" data-off="Sélection" data-toggle="toggle">
+	<br/>
+		<input id="pac-input" class="controls" type="text" name="ville1" value
+			placeholder="Enter a location"> 
+			<input id="pac-input2" name="ville2" value
+			class="controls" type="text" disabled
+			placeholder="Enter a  second location">
+			
 
-			<div id="map" style="width: auto; height: 400px;"></div>
+		<div id="map" style="width: auto; height: 400px;"></div>
 
-		</div>
-
-
-		<div class="container-fluid">
-
-			<table class="table table-fixed table-striped ">
-				<thead>
-					<tr>
-						<th>Row</th>
-						<th>Firstname</th>
-						<th>Lastname</th>
-						<th>Age</th>
-						<th>City</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1</td>
-						<td>Amin</td>
-						<td>Saffarnejad</td>
-						<td>27</td>
-						<td>Ahvaz</td>
-					</tr>
-
-				</tbody>
-			</table>
-		</div>
 	</div>
 
 
-	<div class="col-md-2">
-		<div class="enColonne">
-
-			<a href="#" class="btn btn-primary btn-lg active boutonDroite"
-				role="button" aria-pressed="mixed">Carte</a> <a href="#"
-				class="btn btn-primary btn-lg active boutonDroite" role="button"
-				aria-pressed="mixed">Liste</a>
-
-		</div>
+	<div class="container-fluid" id="containerListe">
+		<div id="listeVilles"></div>
+		
 	</div>
 </div>
