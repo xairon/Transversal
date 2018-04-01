@@ -21,9 +21,7 @@
 
 		</div>
 
-		<div class="col-md-offset-7">
-			<input type="submit" value="Lancer la recherche" onclick="test()">
-		</div>
+		
 
 	</form>
 	<form method="POST" onclick="sendapi()" action="javascript:void(0)" accept-charset="UTF-8">

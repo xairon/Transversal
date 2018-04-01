@@ -105,6 +105,7 @@ function liste(){
     myTable += "</tbody> </table>";
 
     document.getElementById('listeVilles').innerHTML = myTable;
+    document.getElementById("containerListe").style.display = "none";
 }
 
 
