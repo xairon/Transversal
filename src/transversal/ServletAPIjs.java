@@ -18,23 +18,26 @@ public class ServletAPIjs extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<String> name = new ArrayList<String>();
-		ArrayList<Integer> value = new ArrayList<Integer>();
+		ArrayList<String> value = new ArrayList<String>();
+		
 		HashMap <String,ArrayList> jsonh = new HashMap<>();
-		name.add("str1");
-		name.add("str2");
-		name.add("str3");
-		value.add(20);
-		value.add(50);
-		value.add(90);
 		jsonh.put("value", value);
 		jsonh.put("name", name);
 		Gson gson = new Gson(); 
 		String json = gson.toJson(jsonh);
 	
-	String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+	String body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));	
+	String arg []= body.split(";");
+	for(int i =4;i<arg.length;i+=2) {
+		if(!arg[i].contains("false")) {
+			value.add(arg[i]);
+			name.add(arg[i-1]);
+		}
+			
+	}
+
 	System.out.println(jsonh);
 	System.out.println(body);
-	String arg []= body.split(";");
 	switch(arg[0]) {
 	case"request1": response.setContentType(json);
 	PrintWriter out = response.getWriter();

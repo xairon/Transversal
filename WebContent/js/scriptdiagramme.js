@@ -6,17 +6,6 @@ console.log(test);
         var name = test.name;
      
 
-       /* value.push(30);
-        value.push(40);
-        value.push(70);
-        value.push(50);
-        value.push(30);
-       
-        name.push('toto');
-        name.push('titi');
-        name.push('tyty');
-        name.push('tete');
-        name.push('tvtv');*/
         
         var config = {
         		  type: 'bar',
