@@ -46,9 +46,9 @@ function initialize() {
 	          infowindow.close();
 	          marker.setVisible(false);
 	          var place = autocomplete.getPlace();
-	          var name = place.name;
-	          console.log(name);
-	          document.getElementById('ville1').value= name;
+	          var nom = place.name;
+	          console.log(nom);
+	          document.getElementById('pac-input').name= nom;
 	          if (!place.geometry) {
 	            // User entered the name of a Place that was not suggested and
 	            // pressed the Enter key, or the Place Details request failed.
@@ -129,10 +129,10 @@ function initialize2() {
 		          infowindow.close();
 		          marker.setVisible(true);
 		          var place = autocomplete.getPlace();
-		          var name = place.name;
+		          var nom = place.name;
 		       
-		          console.log(name);
-		          document.getElementById('ville2').value= name;
+		          console.log(nom);
+		          document.getElementById('pac-input2').name= nom;
 		          if (!place.geometry) {
 		            // User entered the name of a Place that was not suggested and
 		            // pressed the Enter key, or the Place Details request failed.

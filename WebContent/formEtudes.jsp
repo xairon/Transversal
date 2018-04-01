@@ -11,7 +11,7 @@
 
 			<div class="container margeSlider ajusteAuto">
 
-				<h5>Nombre d'étudiants</h5>
+				<h5>Nombre d'etudiants</h5>
 
 				<input id="etudes-nombre" type="text" 
 					name="etudes-nombre"
@@ -33,19 +33,19 @@
 			<h5>Regroupement</h5>
 
 			<%String [] listeRegroupements = {
-					"Université",
-					"Écoles paramédicales et sociales",
-					"Écoles juridiques et administratives",
-					"Écoles supérieures art et culture",
-					"École de commerce, gestion et comptabilité",
-					"Formations ingénieurs",
-					"Section de techniciens supérieurs et assimilés",
-					"Université de technologie",
-					"Grands établissement MENESR",
-					"Écoles normales supérieures",
+					"Universite",
+					"ecoles paramedicales et sociales",
+					"ecoles juridiques et administratives",
+					"ecoles superieures art et culture",
+					"ecole de commerce, gestion et comptabilite",
+					"Formations ingenieurs",
+					"Section de techniciens superieurs et assimiles",
+					"Universite de technologie",
+					"Grands etablissement MENESR",
+					"ecoles normales superieures",
 					"Instituts nationaux polytechniques",
 					"ESPE",
-					"Classes préparatoires aux grandes écoles (CPGE)"
+					"Classes preparatoires aux grandes ecoles (CPGE)"
 					}; 
 
 			for (int i = 0; i < listeRegroupements.length; i++) {
@@ -78,8 +78,8 @@
 				value="Public">
 			Public<br>
 			<input type="checkbox" id="etudes-secteur-prive" name="etudes-secteur-prive"
-				value="Privé">
-			Privé<br>
+				value="Prive">
+			Prive<br>
 
 
 
