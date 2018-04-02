@@ -1,3 +1,4 @@
+
 function diagramme(response){
 
 	test =  JSON.parse(response);

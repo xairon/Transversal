@@ -53,8 +53,8 @@ public class ServletAPIjs extends HttpServlet {
 	
 	for(int i =4;i<arg.length;i+=2) {
 		if(!arg[i].contains("false")) {
-			valeur[i]=arg[i];
-			nom[i]=arg[i-1];
+			valeurA.add(arg[i]);
+			nomA.add(arg[i-1]);
 		}
 			//note : remplacer les == par des equals sur les string
 	}
@@ -122,6 +122,9 @@ response.setStatus(200);
 	System.out.println(jsonh);
 	System.out.println(body);
 	switch(arg[0]) {
+	case"request1":	response.setContentType(json);
+	PrintWriter out = response.getWriter();
+	out.println(json);
 	case"etudes-nombre": 
 
 	
