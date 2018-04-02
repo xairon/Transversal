@@ -1,10 +1,11 @@
 function diagramme(response){
 
-test =  JSON.parse(response);
-console.log(test);
-       var value = test.value;
-        var name = test.name;
-     
+	test =  JSON.parse(response);
+	console.log(test);
+	       var value2 = test.value2;
+	       var value = test.value;
+	        var name = test.name;
+	     
 
         
         var config = {
@@ -53,36 +54,32 @@ console.log(test);
 
         		setTimeout(function(){
         			for(var i = 0;i<value.length;i++){
-        			config.data.datasets[0].data.push(value[i]);}
+        			config.data.datasets[0].data.push(value[i]);
+        			//config.data.datasets[0].data.push(value2[i]);
+        			}
         			for(var j = 0;j<name.length;j++){
         		  config.data.labels.push(name[j]);
-        	
-        		  
+        		  //config.data.labels.push(name[j]);
         	
         			}
         		  myChart.update();
         		}, 1000)
 }
-function liste(){
+function liste(response){
+	deleteTableau();
+	test =  JSON.parse(response);
+	
 	var myArray = new Array();
-	myArray[0] = new Array("1", "villeA", "37", "3", "14");
-	myArray[1] = new Array("2", "villeB", "41", "2", "13");
-	myArray[2] = new Array("3", "villeC", "56", "4", "10");
-	myArray[3] = new Array("4", "villeD", "29", "2", "5");
-	myArray[4] = new Array("5", "villeA", "37", "3", "14");
-	myArray[5] = new Array("6", "villeB", "41", "2", "13");
-	myArray[6] = new Array("7", "villeC", "56", "4", "10");
-	myArray[7] = new Array("8", "villeD", "29", "2", "5");
-	myArray[8] = new Array("9", "villeA", "37", "3", "14");
-	myArray[9] = new Array("10", "villeB", "41", "2", "13");
-
-    var myTable= "<table id=\"tableau\" class=\"table table-fixed table-striped \">";
-    myTable += "<thead> <tr> <th>Rang</th> <th>Ville</th> <th>Département</th> <th>Région</th> <th>Score</th> </tr> </thead>";
+	myArray[0] = test.liste;
+	myArray[1] = test.liste2;
+	
+	var myTable= "<table id=\"tableauVilles\" class=\"table table-fixed table-striped \">";
+    myTable += "<thead> <tr> <th>Rang</th> <th>Ville</th> <th>Departement</th> <th>Region</th> <th>Score</th> </tr> </thead>";
     myTable += "<tbody>";
     
     for (var i=0; i<myArray.length; i++){
 
-    	myTable += "<tr>";
+    	myTable += "<tr style=\"cursor:pointer;\" onclick=\"recupLigneCliqueListe('" + myArray[i][1] + "')\">";
 
     	for (var j=0; j<myArray[i].length; j++) {
     		myTable+="<td>" + myArray[i][j] + "</td>";
@@ -92,11 +89,18 @@ function liste(){
     }
     
     myTable += "</tbody> </table>";
-
+   
+   
     document.getElementById('listeVilles').innerHTML = myTable;
     document.getElementById("containerListe").style.display = "none";
 }
-
+function deleteTableau(){
+	if(document.getElementById('tableauVilles') != null)
+		document.getElementById('tableauVilles').innerHTML = '';
+}
+function recupLigneCliqueListe(){
+	alert(arguments[0]);
+}
 
 /* champ map */
 function hide() {
