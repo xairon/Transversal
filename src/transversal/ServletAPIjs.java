@@ -22,18 +22,22 @@ public class ServletAPIjs extends HttpServlet {
 		
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
+		ArrayList<String> nomA = new ArrayList<String>();
+		ArrayList<String> valeurA = new ArrayList<String>();
 		ArrayList<String> liste = new ArrayList<String>();
 		ArrayList<String> name2 = new ArrayList<String>();
 		ArrayList<String> value2 = new ArrayList<String>();
 		ArrayList<String> liste2 = new ArrayList<String>();
 		String body;
 		String arg[];
+		String nom[] = null;
+		String valeur[] = null;
 		String req;
 		String ville1;
 		String ville2;
 		boolean v1;
 		boolean v2;
-
+		
 	 body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));	
 	 arg = body.split(";");
 	 req = arg[0];
@@ -47,19 +51,19 @@ public class ServletAPIjs extends HttpServlet {
 		v2=false;
 	else v2 = true;
 	
-	/*for(int i =4;i<arg.length;i+=2) {
+	for(int i =4;i<arg.length;i+=2) {
 		if(!arg[i].contains("false")) {
-			value.add(arg[i]);
-			name.add(arg[i-1]);
+			valeur[i]=arg[i];
+			nom[i]=arg[i-1];
 		}
 			//note : remplacer les == par des equals sur les string
-	}*/
+	}
 if(v1==true&&v2==false) {
 	name.add("Population");
-	name.add("taux de chômage");
-	name.add("nombre d'étudiant");
-	name.add("Population");
-	name.add("Population");
+	name.add("taux de chomage");
+	name.add("nombre d'etudiant");
+	name.add("Superficie");
+	name.add("urbanite");
 	value.add("3000");
 	value.add("30");
 	value.add("453");
@@ -73,15 +77,15 @@ if(v1==true&&v2==false) {
 }
 if(v1==true&&v2==true) {
 	name.add("Population");
-	name.add("taux de chômage");
-	name.add("nombre d'étudiant");
-	name.add("Population1");
-	name.add("Population2");
+	name.add("taux de chomage");
+	name.add("nombre d'etudiant");
+	name.add("Superficie");
+	name.add("urbanite");
 	name2.add("Population v2");
-	name2.add("taux de chômage v2");
-	name2.add("nombre d'étudiant v2");
-	name2.add("Population1 v2");
-	name2.add("Population2 v2");
+	name2.add("taux de chomage v2");
+	name2.add("nombre d'etudiant v2");
+	name2.add("Superficie v2");
+	name2.add("urbanite v2");
 	value.add("3000");
 	value.add("30");
 	value.add("453");
@@ -109,18 +113,160 @@ jsonh.put("name", name);
 jsonh.put("name2", name2);
 jsonh.put("liste", liste);
 jsonh.put("liste2", liste2);
+jsonh.put("nom", nomA);
+jsonh.put("valeur", valeurA);
 Gson gson = new Gson(); 
 String json = gson.toJson(jsonh);
 
+response.setStatus(200);
 	System.out.println(jsonh);
 	System.out.println(body);
 	switch(arg[0]) {
-	case"request1": response.setContentType(json);
-	PrintWriter out = response.getWriter();
-	out.println(json);
-	response.setStatus(200);	
+	case"etudes-nombre": 
+
+	
+	
+	case"etudes-regroupement-ecoles_paramedicales_et_sociales": 
+
+	
+	case"etudes-regroupement-Universite": 
+
+	
+	
+	case"etudes-regroupement-ecoles_juridiques_et_administratives": 
+
+	
+	
+	case"etudes-regroupement-ecoles_superieures_art_et_culture": 
+
+	
+	
+	case"etudes-regroupement-ecole_de_commerce,_gestion_et_comptabilite": 
+
+	
+	
+	case"etudes-regroupement-Formations_ingenieurs": 
+
+	
+	
+	case"etudes-regroupement-Section_de_techniciens_superieurs_et_assimiles": 
+
+	
+	
+	case"etudes-regroupement-Universite_de_technologie": 
+
+	
+	
+	case"etudes-regroupement-Grands_etablissement_MENESR": 
+
+	
+	
+	case"etudes-regroupement-ecoles_normales_superieures": 
+
+	
+	
+	case"etudes-regroupement-Instituts_nationaux_polytechniques": 
+
+	
+	
+	case"etudes-regroupement-ESPE": 
+
+	
+	
+	case"etudes-regroupement-Classes_preparatoires_aux_grandes_ecoles_(CPGE)": 
+
+	
+	
+	case"etudes-secteur-public": 
+
+	
+	
+	case"etudes-secteur-prive": 
+
+	
+	
+	case"population-densite": 
+
+	
+	
+	case"population-croissance": 
+
+	
+	
+	case"population-chomage": 
+
+	
+	
+	case"population-secteur-Agriculture": 
+
+	
+	
+	case"population-secteur-Industrie": 
+
+	
+	
+	case"population-secteur-Construction": 
+
+	
+	
+	case"population-secteur-Commerce_et_service": 
+
+	
+	
+	case"population-secteur-Commerce": 
+
+	
+	
+	case"population-secteur-Administration_publique": 
+
+	
+	
+	case"territoire-orientation-Residentiel": 
+
+	
+	
+	case"territoire-orientation-Urbain": 
+
+	
+	
+	case"territoire-orientation-Industriel": 
+
+	
+	
+	case"territoire-orientation-Agroalimentaire": 
+
+	
+	
+	case"territoire-orientation-Diversifie": 
+
+	
+	
+	case"entreprise-emploi": 
+
+	
+	
+	case"entreprise-secteur-Services": 
+
+	
+	
+	case"entreprise-secteur-Commerce": 
+
+	
+	
+	case"entreprise-secteur-Construction": 
+
+	
+	
+	case"entreprise-secteur-Industrie": 
+
+	
+	
 	break;
 	}
+	/*PrintWriter out = null; pour l'envoie de réponse
+	response.setContentType(json);
+	out = response.getWriter();
+	out.println(json);*/
 	}
-
+	
 }
