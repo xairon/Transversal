@@ -1,13 +1,25 @@
 function diagramme(response){
 
 	test =  JSON.parse(response);
-	console.log(test);
+var v1=true;
+var v2=true;
 	       var value2 = test.value2;
 	       var value = test.value;
 	        var name = test.name;
-	     
-
-        
+	        var name2 = test.name2;
+	        console.log(test);
+	    	console.log(value);
+	    	console.log(value2);
+	    	console.log(name);
+	    	console.log(name2);
+	    	
+  if(value.length==0&&name.length==0) 
+	  v1 = false;
+  if(value2.length==0&&name2.length==0) 
+	  v2 = false;
+  
+  console.log(v1);
+  console.log(v2);
         var config = {
         		  type: 'bar',
         		  data: {
@@ -52,21 +64,39 @@ function diagramme(response){
         		var ctx = document.getElementById("histogramme");
         		var myChart = new Chart(ctx, config);
 
-        		setTimeout(function(){
-        			for(var i = 0;i<value.length;i++){
-        			config.data.datasets[0].data.push(value[i]);
-        			//config.data.datasets[0].data.push(value2[i]);
-        			}
-        			for(var j = 0;j<name.length;j++){
-        		  config.data.labels.push(name[j]);
-        		  //config.data.labels.push(name[j]);
-        	
-        			}
-        		  myChart.update();
-        		}, 1000)
+if(v1==true&&v2==false){
+	setTimeout(function(){
+		for(var i = 0;i<value.length;i++){
+		config.data.datasets[0].data.push(value[i]);
+	
+		}
+		for(var j = 0;j<name.length;j++){
+	  config.data.labels.push(name[j]);
+
+
+		}
+	  myChart.update();
+	}, 1000)	
+}
+if(v1==true&&v2==true){
+	setTimeout(function(){
+		for(var i = 0;i<value.length;i++){
+		config.data.datasets[0].data.push(value[i]);
+		config.data.datasets[0].data.push(value2[i]);
+		}
+		for(var j = 0;j<name.length;j++){
+	  config.data.labels.push(name[j]);
+	  config.data.labels.push(name2[j]);
+
+		}
+	  myChart.update();
+	}, 1000)
+}
+        		
 }
 function liste(response){
 	deleteTableau();
+	test ="";
 	test =  JSON.parse(response);
 	
 	var myArray = new Array();

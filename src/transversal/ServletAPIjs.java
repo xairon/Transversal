@@ -14,36 +14,36 @@ import com.google.gson.Gson;
 
 
 public class ServletAPIjs extends HttpServlet {
-	ArrayList<String> name = new ArrayList<String>();
-	ArrayList<String> value = new ArrayList<String>();
-	ArrayList<String> liste = new ArrayList<String>();
-	ArrayList<String> value2 = new ArrayList<String>();
-	ArrayList<String> liste2 = new ArrayList<String>();
-	String body;
-	String arg[];
-	String req;
-	String ville1;
-	String ville2;
-	boolean v1;
-	boolean v2;
-	HashMap <String,ArrayList> jsonh = new HashMap<>();
+		HashMap <String,ArrayList> jsonh = new HashMap<>();
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//("1", "villeA", "37", "3", "14"); pour la liste
 		
-	
+		ArrayList<String> name = new ArrayList<String>();
+		ArrayList<String> value = new ArrayList<String>();
+		ArrayList<String> liste = new ArrayList<String>();
+		ArrayList<String> name2 = new ArrayList<String>();
+		ArrayList<String> value2 = new ArrayList<String>();
+		ArrayList<String> liste2 = new ArrayList<String>();
+		String body;
+		String arg[];
+		String req;
+		String ville1;
+		String ville2;
+		boolean v1;
+		boolean v2;
+
 	 body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));	
 	 arg = body.split(";");
 	 req = arg[0];
 	 ville1 = arg[1];
 	 ville2 = arg[2];
-	boolean v1;
-	boolean v2;
-	if(ville1=="ville1")
+
+	if(ville1.equals("ville1"))
 		v1=false;
 	else v1 =true;
-	if(ville2=="ville2")
+	if(ville2.equals("ville2"))
 		v2=false;
 	else v2 = true;
 	
@@ -75,8 +75,13 @@ if(v1==true&&v2==true) {
 	name.add("Population");
 	name.add("taux de chômage");
 	name.add("nombre d'étudiant");
-	name.add("Population");
-	name.add("Population");
+	name.add("Population1");
+	name.add("Population2");
+	name2.add("Population v2");
+	name2.add("taux de chômage v2");
+	name2.add("nombre d'étudiant v2");
+	name2.add("Population1 v2");
+	name2.add("Population2 v2");
 	value.add("3000");
 	value.add("30");
 	value.add("453");
@@ -101,7 +106,7 @@ if(v1==true&&v2==true) {
 jsonh.put("value", value);
 jsonh.put("value2", value2);
 jsonh.put("name", name);
-jsonh.put("name2", name);
+jsonh.put("name2", name2);
 jsonh.put("liste", liste);
 jsonh.put("liste2", liste2);
 Gson gson = new Gson(); 
