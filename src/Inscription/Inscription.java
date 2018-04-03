@@ -1,4 +1,4 @@
-package transversal;
+package Inscription;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import DAO.Member;
+import DAO.MemberDAOImpl;
 
 
 public class Inscription extends HttpServlet {

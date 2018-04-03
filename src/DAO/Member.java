@@ -1,4 +1,4 @@
-package transversal;
+package DAO;
 
 public class Member implements java.io.Serializable{
 	private Long ID;

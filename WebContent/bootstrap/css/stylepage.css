@@ -3,6 +3,11 @@ html, body {
 	background-color: #e9ebee;
 }
 
+/*gère le texte de l'affichage à côté des graphes*/
+.affichageTexte{
+	
+}
+
 .ajusteAuto{
 	height: auto;
 	width: auto;

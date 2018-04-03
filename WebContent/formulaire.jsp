@@ -1,4 +1,3 @@
-
 <!-- ligne des boutons -->
 <div class="row">
 
@@ -22,18 +21,19 @@
 
 		</div>
 
-		<div class="col-md-offset-7">
-			<input type="submit" value="Lancer la recherche" onclick="test()">
-		</div>
+		
 
 	</form>
+	<form method="POST" onclick="sendapi()" action="javascript:void(0)" accept-charset="UTF-8">
+					
+						<button type="submit" name="submit" class="btn btn-info btn-block">Lancer</button>
+						
+					</form>
+					<div id="out"></div>
+	
 </div>
 
-<div class="col-md-offset-7">
-	<button id="bouton" onclick="diagramme()" type="button"
-		class="btn btn-primary">Lancer graphe</button>
-	<button id="bouton2" onclick="liste()" type="button"
-		class="btn btn-primary">Lancer Liste</button>
-</div>
+
+
 
 

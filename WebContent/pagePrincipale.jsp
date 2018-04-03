@@ -29,10 +29,12 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
 
+<script type="text/javascript" src="js/initmap.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script type="text/javascript" src="js/testdouble.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/scriptdiagramme.js"></script>
 
 
 
@@ -71,7 +73,6 @@
 
 
 
-<script type="text/javascript" src="js/initmap.js"></script>
 
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU8DD35Y8bbwiuNb6BVuOWAQviVqyORGU&libraries=places&callback=initMap"

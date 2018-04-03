@@ -9,15 +9,15 @@
 		
 		
 		
-		<h5>Orientation économique</h5>
+		<h5>Orientation economique</h5>
 
 			<%
 			String [] listeOrientationEco = {
-					"Résidentiel",
+					"Residentiel",
 					"Urbain",
 					"Industriel",
 					"Agroalimentaire",
-					"Diversifié"
+					"Diversifie"
 					}; 
 			
 			for (int i = 0; i < listeOrientationEco.length; i++) {
