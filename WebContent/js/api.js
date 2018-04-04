@@ -66,23 +66,6 @@ var etude = new Array;
 	population.push(";"+document.getElementById("population-chomage").name+";"+
   document.getElementById("population-chomage").value);
   
-	population.push(";"+document.getElementById("population-secteur-Agriculture").value+";"+
-  document.getElementById("population-secteur-Agriculture").checked);
-  
-	population.push(";"+document.getElementById("population-secteur-Industrie").value+";"+
-  document.getElementById("population-secteur-Industrie").checked );
-  
-	population.push(";"+document.getElementById("population-secteur-Construction").value+";"+
-  document.getElementById("population-secteur-Construction").checked );
-  
-	population.push(";"+document.getElementById("population-secteur-Commerce_et_service").value+";"+
-  document.getElementById("population-secteur-Commerce_et_service").checked );
-  
-	population.push(";"+document.getElementById("population-secteur-Commerce").value+";"+
-  document.getElementById("population-secteur-Commerce").checked );
-  
-	population.push(";"+document.getElementById("population-secteur-Administration_publique").value+";"+
-  document.getElementById("population-secteur-Administration_publique").checked );
 	
 	
 	var territoire=new Array;	
@@ -125,8 +108,10 @@ var etude = new Array;
 		xhr.send(body);
 	}
 	function f(response) {
+		
 		liste(response);
 		diagramme(response);
+		
 
 
 	}

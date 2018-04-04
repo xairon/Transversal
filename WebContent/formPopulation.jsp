@@ -51,45 +51,6 @@
 			</div>
 
 
-
-
-
-
-
-			<h5>Secteur</h5>
-
-			<%
-			String [] listeSecteursPop = {
-					"Agriculture",
-					"Industrie",
-					"Construction",
-					"Commerce et service",
-					"Commerce",
-					"Administration publique"
-					}; 
-		
-			for (int i = 0; i < listeSecteursPop.length; i++) {
-				String regroupementMotSepare[] = listeSecteursPop[i].split(" ");
-				String regroupementMotColle = "";
-				for (int j = 0; j < regroupementMotSepare.length; j++) {
-					if (j != 0)
-						regroupementMotColle += "_";
-					regroupementMotColle += regroupementMotSepare[j];
-				}
-			%>
-
-
-
-			<input type="checkbox"
-				id=<%="population-secteur-" + regroupementMotColle%>
-				name=<%="population-secteur-" + regroupementMotColle%>
-				value=<%=regroupementMotColle%>>
-			<%=listeSecteursPop[i]%><br>
-			<%} %>
-
-
-
-
 		</div>
 	</div>
 </div>
