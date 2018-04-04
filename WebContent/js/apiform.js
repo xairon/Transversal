@@ -1,4 +1,4 @@
-function sendapi()
+function sendform()
 {
 var etude = new Array;
 	
@@ -86,16 +86,14 @@ var etude = new Array;
 
 	var body="";
 
-	body="request1"+";" 
-		+document.getElementById("pac-input").name+";"
-		+document.getElementById("pac-input2").name+";"+etude+population+territoire+entreprise; 
+	body=etude+population+territoire+entreprise; 
 		
 
 
 
 	let server_domain = 'localhost:8080';
 	function doRequest(body, callback) {
-		const url = "http://" + server_domain + "/trans/API";
+		const url = "http://" + server_domain + "/trans/APIform";
 		let xhr = new XMLHttpRequest();
 
 		function internCallback() {

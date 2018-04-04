@@ -24,7 +24,7 @@
 		
 
 	</form>
-	<form method="POST" onclick="sendapi()" action="javascript:void(0)" accept-charset="UTF-8">
+	<form method="POST" onclick="sendform()" action="javascript:void(0)" accept-charset="UTF-8">
 					
 						<button type="submit" name="submit" class="btn btn-info btn-block">Lancer</button>
 						

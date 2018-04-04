@@ -14,7 +14,12 @@
 			<input id="pac-input2" name="ville2" value
 			class="controls" type="text" disabled
 			placeholder="Enter a  second location">
-			<button id="lancerSelectComp" onclick="sendapi()"name="lancerSelectComp" class="btn btn-info">Lancer</button>
+			<form method="POST" onclick="sendselec()" action="javascript:void(0)" accept-charset="UTF-8">
+					
+						<button id="lancerSelectComp" onclick="sendselec()" name="lancerSelectComp" class="btn btn-info">Lancer</button>
+						
+					</form>
+			
 
 		<div id="map" style="width: auto; height: 400px;"></div>
 

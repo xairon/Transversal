@@ -19,7 +19,7 @@ public class ServletAPIjs extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//("1", "villeA", "37", "3", "14"); pour la liste
-		
+	
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
 		ArrayList<String> nomA = new ArrayList<String>();
@@ -30,9 +30,8 @@ public class ServletAPIjs extends HttpServlet {
 		ArrayList<String> liste2 = new ArrayList<String>();
 		String body;
 		String arg[];
-		String nom[] = null;
-		String valeur[] = null;
-		String req;
+	
+
 		String ville1;
 		String ville2;
 		boolean v1;
@@ -40,9 +39,9 @@ public class ServletAPIjs extends HttpServlet {
 		
 	 body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));	
 	 arg = body.split(";");
-	 req = arg[0];
-	 ville1 = arg[1];
-	 ville2 = arg[2];
+
+	 ville1 = arg[0];
+	 ville2 = arg[1];
 
 	if(ville1.equals("ville1"))
 		v1=false;
@@ -51,29 +50,24 @@ public class ServletAPIjs extends HttpServlet {
 		v2=false;
 	else v2 = true;
 	
-	for(int i =4;i<arg.length;i+=2) {
-		if(!arg[i].contains("false")) {
-			valeurA.add(arg[i]);
-			nomA.add(arg[i-1]);
-		}
-			//note : remplacer les == par des equals sur les string
-	}
+
+	
 if(v1==true&&v2==false) {
-	name.add("Population");
+	name.add("Population"); 
 	name.add("taux de chomage");
 	name.add("nombre d'etudiant");
 	name.add("Superficie");
 	name.add("urbanite");
-	value.add("3000");
-	value.add("30");
-	value.add("453");
-	value.add("100");
-	value.add("200");
-	liste.add("1");
+	value.add("3000");//requête sur la population
+	value.add("30");//requête sur le chomage
+	value.add("453");//requête sur le nombre d'étudiant
+	value.add("100");//requête blabla
+	value.add("200");//requête sur blabla
+	liste.add("1"); //requête sur la meilleure ville son numéro de classement
 	liste.add(ville1);
-	liste.add("Indre");
-	liste.add("Centre");
-	liste.add("0");
+	liste.add("Indre"); //requête sur le département
+	liste.add("Centre"); //requête sur la région
+	liste.add("0"); //requête sur le ??score ??
 }
 if(v1==true&&v2==true) {
 	name.add("Population");
@@ -86,166 +80,47 @@ if(v1==true&&v2==true) {
 	name2.add("nombre d'etudiant v2");
 	name2.add("Superficie v2");
 	name2.add("urbanite v2");
-	value.add("3000");
-	value.add("30");
-	value.add("453");
-	value.add("100");
-	value.add("200");
-	liste.add("1");
+	value.add("3000");//requête sur la population
+	value.add("30");//requête sur le chomage
+	value.add("453");//requête sur le nombre d'étudiant
+	value.add("100");//requête blabla
+	value.add("200");//requête sur blabla
+	liste.add("1"); //requête sur la meilleure ville son numéro de classement
 	liste.add(ville1);
-	liste.add("Indre");
-	liste.add("Centre");
-	liste.add("0");
-	value2.add("5000");
-	value2.add("45");
-	value2.add("853");
-	value2.add("300");
-	value2.add("100");
-	liste2.add("1");
+	liste.add("Indre"); //requête sur le département
+	liste.add("Centre"); //requête sur la région
+	liste.add("0"); //requête sur le ??score ??
+	value2.add("3000");//requête sur la population
+	value2.add("30");//requête sur le chomage
+	value2.add("453");//requête sur le nombre d'étudiant
+	value2.add("100");//requête blabla
+	value2.add("200");//requête sur blabla
+	liste2.add("1"); //requête sur la meilleure ville son numéro de classement
 	liste2.add(ville2);
-	liste2.add("Indre");
-	liste2.add("Centre");
-	liste2.add("0");
+	liste2.add("Indre"); //requête sur le département
+	liste2.add("Centre"); //requête sur la région
+	liste2.add("0"); //requête sur le ??score ??
 }
-jsonh.put("value", value);
-jsonh.put("value2", value2);
-jsonh.put("name", name);
-jsonh.put("name2", name2);
-jsonh.put("liste", liste);
-jsonh.put("liste2", liste2);
-jsonh.put("nom", nomA);
-jsonh.put("valeur", valeurA);
-Gson gson = new Gson(); 
-String json = gson.toJson(jsonh);
 
-response.setStatus(200);
+
+
 	System.out.println(jsonh);
 	System.out.println(body);
-	switch(arg[0]) {
-	case"request1":	response.setContentType(json);
-	PrintWriter out = response.getWriter();
-	out.println(json);
-	case"etudes-nombre": 
+	
+	jsonh.put("value", value);
+	jsonh.put("value2", value2);
+	jsonh.put("name", name);
+	jsonh.put("name2", name2);
+	jsonh.put("liste", liste);
+	jsonh.put("liste2", liste2);
 
-	
-	
-	case"etudes-regroupement-ecoles_paramedicales_et_sociales": 
 
-	
-	case"etudes-regroupement-Universite": 
-
-	
-	
-	case"etudes-regroupement-ecoles_juridiques_et_administratives": 
-
-	
-	
-	case"etudes-regroupement-ecoles_superieures_art_et_culture": 
-
-	
-	
-	case"etudes-regroupement-ecole_de_commerce,_gestion_et_comptabilite": 
-
-	
-	
-	case"etudes-regroupement-Formations_ingenieurs": 
-
-	
-	
-	case"etudes-regroupement-Section_de_techniciens_superieurs_et_assimiles": 
-
-	
-	
-	case"etudes-regroupement-Universite_de_technologie": 
-
-	
-	
-	case"etudes-regroupement-Grands_etablissement_MENESR": 
-
-	
-	
-	case"etudes-regroupement-ecoles_normales_superieures": 
-
-	
-	
-	case"etudes-regroupement-Instituts_nationaux_polytechniques": 
-
-	
-	
-	case"etudes-regroupement-ESPE": 
-
-	
-	
-	case"etudes-regroupement-Classes_preparatoires_aux_grandes_ecoles_(CPGE)": 
-
-	
-	
-	case"etudes-secteur-public": 
-
-	
-	
-	case"etudes-secteur-prive": 
-
-	
-	
-	case"population-densite": 
-
-	
-	
-	case"population-croissance": 
-
-	
-	
-	case"population-chomage": 
-
-	
-		
-	case"territoire-orientation-Residentiel": 
-
-	
-	
-	case"territoire-orientation-Urbain": 
-
-	
-	
-	case"territoire-orientation-Industriel": 
-
-	
-	
-	case"territoire-orientation-Agroalimentaire": 
-
-	
-	
-	case"territoire-orientation-Diversifie": 
-
-	
-	
-	case"entreprise-emploi": 
-
-	
-	
-	case"entreprise-secteur-Services": 
-
-	
-	
-	case"entreprise-secteur-Commerce": 
-
-	
-	
-	case"entreprise-secteur-Construction": 
-
-	
-	
-	case"entreprise-secteur-Industrie": 
-
-	
-	
-	break;
-	}
-	/*PrintWriter out = null; pour l'envoie de réponse
+	Gson gson = new Gson(); 
+	String json = gson.toJson(jsonh);
+	PrintWriter out = null; 
 	response.setContentType(json);
 	out = response.getWriter();
-	out.println(json);*/
+	out.println(json);
 	}
 	
 }

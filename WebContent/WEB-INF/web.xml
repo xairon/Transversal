@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
 <web-app id="WebApp_ID">
-	<display-name>trans</display-name>
+	<display-name>transversal</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -30,6 +30,10 @@
         <servlet-name>ServletAPIjs</servlet-name>
         <servlet-class>transversal.ServletAPIjs</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAPIform</servlet-name>
+        <servlet-class>transversal.ServletAPIform</servlet-class>
+    </servlet>
     
         <servlet>
         <servlet-name>Formulaire</servlet-name>
@@ -41,8 +45,12 @@
 </servlet-mapping> 
     <servlet-mapping>
         <servlet-name>ServletAPIjs</servlet-name>
-        <url-pattern>/API</url-pattern>
-    </servlet-mapping> 
+        <url-pattern>/APIselec</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAPIform</servlet-name>
+        <url-pattern>/APIform</url-pattern>
+    </servlet-mapping>  
       <servlet-mapping>
         <servlet-name>inscription</servlet-name>
         <url-pattern>/Inscription</url-pattern>
