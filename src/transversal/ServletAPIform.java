@@ -52,64 +52,65 @@ public class ServletAPIform extends HttpServlet {
 	}
 	String tabnom[] = new String[nomA.size()]; 
 	tabnom = nomA.toArray(tabnom);
-switch(tabnom[0]) {
+	for(int i =0;i<tabnom.length;i++) {
+switch(tabnom[i]) {
 	case"etudes-nombre": name.add("Nombre d'étudiant");value.add("2000");
-
+	break;
 	case"etudes-regroupement-Universite": name.add("Universités");value.add("8");
-	
+	break;
 	case"etudes-regroupement-ecoles_paramedicales_et_sociales": name.add("écoles paramédicales et sociales");value.add("5");
-
+	break;
 	
 	case"etudes-regroupement-ecoles_juridiques_et_administratives": name.add("p");value.add("p");
-
+	break;
 	
 	
 	case"etudes-regroupement-ecoles_superieures_art_et_culture": name.add("pp");value.add("pp");
-
+	break;
 	
 	
 	case"etudes-regroupement-ecole_de_commerce,_gestion_et_comptabilite": name.add("ppp");value.add("ppp");
-
+	break;
 	
 	
 	case"etudes-regroupement-Formations_ingenieurs": name.add("a");value.add("a");
-
+	break;
 	
 	
 	case"etudes-regroupement-Section_de_techniciens_superieurs_et_assimiles": name.add("aa");value.add("aa");
-
+	break;
 	
 	
 	case"etudes-regroupement-Universite_de_technologie": name.add("aaa");value.add("aaa");
-
+	break;
 	
 	
 	case"etudes-regroupement-Grands_etablissement_MENESR": name.add("d");value.add("d");
 
-	
+	break;
 	
 	case"etudes-regroupement-ecoles_normales_superieures": name.add("dd");value.add("dd");
 
-	
+	break;
 	
 	case"etudes-regroupement-Instituts_nationaux_polytechniques": name.add("ddd");value.add("ddd");
-
+	break;
 	
 	
 	case"etudes-regroupement-ESPE": name.add("c");value.add("c");
-
+	break;
 	
 	
 	case"etudes-regroupement-Classes_preparatoires_aux_grandes_ecoles_(CPGE)": name.add("cc");value.add("cc");
 
-	
+	break;
 	
 	case"etudes-secteur-public": name.add("ccc");value.add("ccc");
-
+	break;
 	
 	
 	case"etudes-secteur-prive": name.add("j");value.add("j");
-
+	break;
 	
 	/*
 	case"population-densite": 
@@ -164,7 +165,7 @@ switch(tabnom[0]) {
 
 	*/
 	
-	break;
+}
 	}
 	jsonh.put("value", value);
 	jsonh.put("value2", value2);
