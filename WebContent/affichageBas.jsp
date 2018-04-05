@@ -1,7 +1,7 @@
 <div class="container-fluid margeZero">
 
 
-	<div class="container ajusteGraphe">
+	<div class="container ajusteGraphe col-md-6">
 		<canvas id="histogramme"></canvas>
 
 	</div>

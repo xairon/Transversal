@@ -33,8 +33,8 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script type="text/javascript" src="js/apiselection.js"></script>
-   <script type="text/javascript" src="js/apiform.js"></script>
+  <script type="text/javascript" src="js/apiform.js"></script>
+    <script type="text/javascript" src="js/apiselection.js"></script>
     <script type="text/javascript" src="js/scriptdiagramme.js"></script>
 
 
@@ -44,13 +44,13 @@
 <body onload="initialize()">
 
 
-	<div class="navbar navbar-default margeZero">
+	<div class="navbar navbar-default margeZero navBarPrincipale">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="PagePrincipale">Nom</a>
+				<a title="nomSite" class="navbar-brand" href="PagePrincipale">Où étudier.com</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="login.jsp">Déconnexion</a></li>
+				<li><a title="deconnexion" href="login.jsp">Déconnexion</a></li>
 			</ul>
 		</div>
 	</div>

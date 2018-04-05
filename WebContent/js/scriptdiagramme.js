@@ -132,9 +132,6 @@ function affichageTexteGraphe(response){
 	if(texte2 !== "")
 		document.getElementById('infosTexte2').innerHTML = texte2;
 }
-
-
-
 function liste(response){
 	deleteTableau();
 	test ="";

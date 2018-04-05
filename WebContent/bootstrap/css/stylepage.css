@@ -3,18 +3,37 @@ html, body {
 	background-color: #e9ebee;
 }
 
-.ajusteAuto{
-	height: auto;
-	width: auto;
+
+
+
+.navBarPrincipale{
+	background-color: #4db4b9;
 }
 
-.ajusteGraphe{
-	
-	width: 50%;
+.formPadding{
+	padding-top: 5px;
 }
 
 .interieurMenu{
-	background-color: #CDD1D8;
+	background-color: #ddf1f2;
+}
+
+a[id*="onglet"]{
+	width: 100px;
+	text-align: center;
+	background-color: #6cc1c6;
+	color: black;
+}
+
+/*menu*/
+.panel-default > .panel-heading {
+	background-color: #72c2c7;
+	cursor: pointer;
+}
+
+.boutons{
+	background-color: #6cc1c6;
+	border-color: #6cc1c6;
 }
 
 .blue {
@@ -29,6 +48,32 @@ html, body {
 	background-color: red;
 }
 
+h4[id="texteBienvenue"]{
+	text-align: justify;
+}
+
+.affichageTexte{
+	
+}
+
+#containerListe{
+	height: 300px;
+}
+
+.ajusteAuto{
+	height: auto;
+	width: auto;
+}
+
+.ajusteGraphe{
+	
+	width: 50%;
+}
+
+
+
+
+
 table {
     width: auto;
 }
@@ -38,7 +83,9 @@ thead, tbody, tr, td, th {
 }
 
 thead th {
-    height: 30px;
+    height: 35px;
+    font-weight:bold;
+    font-size: 15px;
 }
 
 tbody {
