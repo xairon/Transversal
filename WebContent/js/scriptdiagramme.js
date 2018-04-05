@@ -132,7 +132,7 @@ function affichageTexteGraphe(response){
 	if(texte2 !== "")
 		document.getElementById('infosTexte2').innerHTML = texte2;
 }
-<<<<<<< HEAD
+
 
 
 
@@ -162,41 +162,9 @@ function liste(response){
     
     myTable += "</tbody> </table>";
    
-   
     document.getElementById('listeVilles').innerHTML = myTable;
-=======
-function liste(response){
-	deleteTableau();
-	test ="";
-	test =  JSON.parse(response);
-	
-	var myArray = new Array();
-	myArray[0] = test.liste;
-	myArray[1] = test.liste2;
-	
-	var myTable= "<table id=\"tableauVilles\" class=\"table table-fixed table-striped \">";
-    myTable += "<thead> <tr> <th>Rang</th> <th>Ville</th> <th>Departement</th> <th>Region</th> <th>Score</th> </tr> </thead>";
-    myTable += "<tbody>";
-    
-    for (var i=0; i<myArray.length; i++){
-
-    	myTable += "<tr style=\"cursor:pointer;\" onclick=\"recupLigneCliqueListe('" + myArray[i][1] + "')\">";
-
-    	for (var j=0; j<myArray[i].length; j++) {
-    		myTable+="<td>" + myArray[i][j] + "</td>";
-    	}
-
-    	myTable += "</tr>";
-    }
-    
-    myTable += "</tbody> </table>";
-   
-   
-    document.getElementById('listeVilles').innerHTML = myTable;
-    document.getElementById("containerListe").style.display = "none";
->>>>>>> branch 'v2' of https://github.com/xairon/Transversal.git
-
 }
+
 function deleteTableau(){
 	if(document.getElementById('tableauVilles') != null)
 		document.getElementById('tableauVilles').innerHTML = '';
