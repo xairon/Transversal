@@ -16,12 +16,12 @@
 					type="text" 
 					name="entreprise-emploi" 
 					data-provide="slider"
-					data-slider-ticks="[1, 2, 3]"
-					data-slider-ticks-labels='["faible", "moyen", "fort"]'
-					data-slider-min="1" 
+					data-slider-ticks="[0, 1, 2, 3]"
+					data-slider-ticks-labels='["indifferent", "faible", "moyen", "fort"]'
+					data-slider-min="0" 
 					data-slider-max="3"
 					data-slider-step="1"
-					data-slider-value="2" 
+					data-slider-value="0" 
 					data-slider-tooltip="hide" />
 
 			</div>

@@ -2,108 +2,108 @@
 function diagramme(response){
 	affichageTexteGraphe(response);
 	test =  JSON.parse(response);
-var v1=true;
-var v2=true;
-	       var value2 = test.value2;
-	       var value = test.value;
-	        var name = test.name;
-	        var name2 = test.name2;
-	        console.log(test);
-	    	console.log(value);
-	    	console.log(value2);
-	    	console.log(name);
-	    	console.log(name2);
-	    	
-  if(value.length==0&&name.length==0) 
-	  v1 = false;
-  if(value2.length==0&&name2.length==0) 
-	  v2 = false;
-  
-  console.log(v1);
-  console.log(v2);
-        var config = {
-        		  type: 'bar',
-        		  data: {
-        		    labels: [],
-        		    datasets: [{
-        		      label: [],
-        		      data: [],
-        		      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        	            borderColor: 'rgba(255,99,132,1)',
-        	            borderWidth: 1
-        		    }]
-        		  },
-        options: {
-	        scales: { yAxes: [{ ticks: { beginAtZero: true   }  }] }  }
-        		};
-        var randomColorPlugin = {
+	var v1=true;
+	var v2=true;
+	var value2 = test.value2;
+	var value = test.value;
+	var name = test.name;
+	var name2 = test.name2;
+	console.log(test);
+	console.log(value);
+	console.log(value2);
+	console.log(name);
+	console.log(name2);
 
-        	    // We affect the `beforeUpdate` event
-        	    beforeUpdate: function(chart) {
-        	        var backgroundColor = [];
-        	        var borderColor = [];
-        	        
-        	        // For every data we have ...
-        	        for (var i = 0; i < chart.config.data.datasets[0].data.length; i++) {
-        	        
-        	        	// We generate a random color
-        	        	var color = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",";
-        	            
-        	            // We push this new color to both background and border color arrays
-        	            backgroundColor.push(color + "0.2)");
-        	            borderColor.push(color + "1)");
-        	        }
-        	        
-        	        // We update the chart bars color properties
-        	        chart.config.data.datasets[0].backgroundColor = backgroundColor;
-        	        chart.config.data.datasets[0].borderColor = borderColor;
-        	    }
-        	};
+	if(value.length==0&&name.length==0) 
+		v1 = false;
+	if(value2.length==0&&name2.length==0) 
+		v2 = false;
 
-        	// We now register the plugin to the chart's plugin service to activate it
-        	Chart.pluginService.register(randomColorPlugin);
-        		var ctx = document.getElementById("histogramme");
-        		var myChart = new Chart(ctx, config);
+	console.log(v1);
+	console.log(v2);
+	var config = {
+			type: 'bar',
+			data: {
+				labels: [],
+				datasets: [{
+					label: [],
+					data: [],
+					backgroundColor: 'rgba(255, 99, 132, 0.2)',
+					borderColor: 'rgba(255,99,132,1)',
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: { yAxes: [{ ticks: { beginAtZero: true   }  }] }  }
+	};
+	var randomColorPlugin = {
 
-if(v1==true&&v2==false){
-	setTimeout(function(){
-		for(var i = 0;i<value.length;i++){
-		config.data.datasets[0].data.push(value[i]);
-	
-		}
-		for(var j = 0;j<name.length;j++){
-	  config.data.labels.push(name[j]);
+			// We affect the `beforeUpdate` event
+			beforeUpdate: function(chart) {
+				var backgroundColor = [];
+				var borderColor = [];
+
+				// For every data we have ...
+				for (var i = 0; i < chart.config.data.datasets[0].data.length; i++) {
+
+					// We generate a random color
+					var color = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ",";
+
+					// We push this new color to both background and border color arrays
+					backgroundColor.push(color + "0.2)");
+					borderColor.push(color + "1)");
+				}
+
+				// We update the chart bars color properties
+				chart.config.data.datasets[0].backgroundColor = backgroundColor;
+				chart.config.data.datasets[0].borderColor = borderColor;
+			}
+	};
+
+	// We now register the plugin to the chart's plugin service to activate it
+	Chart.pluginService.register(randomColorPlugin);
+	var ctx = document.getElementById("histogramme");
+	var myChart = new Chart(ctx, config);
+
+	if(v1==true&&v2==false){
+		setTimeout(function(){
+			for(var i = 0;i<value.length;i++){
+				config.data.datasets[0].data.push(value[i]);
+
+			}
+			for(var j = 0;j<name.length;j++){
+				config.data.labels.push(name[j]);
 
 
-		}
-	  myChart.update();
-	}, 1000)	
-}
-if(v1==true&&v2==true){
-	setTimeout(function(){
-		for(var i = 0;i<value.length;i++){
-		config.data.datasets[0].data.push(value[i]);
-		config.data.datasets[0].data.push(value2[i]);
-		}
-		for(var j = 0;j<name.length;j++){
-	  config.data.labels.push(name[j]);
-	  config.data.labels.push(name2[j]);
+			}
+			myChart.update();
+		}, 1000)	
+	}
+	if(v1==true&&v2==true){
+		setTimeout(function(){
+			for(var i = 0;i<value.length;i++){
+				config.data.datasets[0].data.push(value[i]);
+				config.data.datasets[0].data.push(value2[i]);
+			}
+			for(var j = 0;j<name.length;j++){
+				config.data.labels.push(name[j]);
+				config.data.labels.push(name2[j]);
 
-		}
-	  myChart.update();
-	}, 1000)
-}
-        		
+			}
+			myChart.update();
+		}, 1000)
+	}
+
 }
 function affichageTexteGraphe(response){
 	test =  JSON.parse(response);
-    var value2 = test.value2;
-    var value = test.value;
-     var name = test.name;
-     
+	var value2 = test.value2;
+	var value = test.value;
+	var name = test.name;
+
 	// je sais pas comment ça arrivera, donc je t'ai mis 2 façons de les créer, donc comme ça t'arrange
 	// (en espérant qu'au moins une te conviennes ^^')
-	
+
 	// valeurs tests
 	var nomDesAttributs = test.name;
 	var valeursTexte1 = test.value;
@@ -124,7 +124,7 @@ function affichageTexteGraphe(response){
 			texte2 += "<br />";
 		texte2 += "<b>" + nomDesAttributs[i] +  " :</b> " + valeursTexte2[i] + " <br />";
 	}
-	
+
 	// mets le texte seulement si ya des choses à mettre... et en même tps, si ya rien à mettre
 	// il ne va rien afficher par défaut.... 
 	if(texte1 !== "")
@@ -136,31 +136,30 @@ function liste(response){
 	deleteTableau();
 	test ="";
 	test =  JSON.parse(response);
-	
+
 	var myArray = new Array();
 	myArray[0] = test.liste;
 	myArray[1] = test.liste2;
-	
+
 	var myTable= "<table id=\"tableauVilles\" class=\"table table-fixed table-striped \">";
-    myTable += "<thead> <tr> <th>Rang</th> <th>Ville</th> <th>Departement</th> <th>Region</th> <th>Score</th> </tr> </thead>";
-    myTable += "<tbody>";
-    
-    for (var i=0; i<myArray.length; i++){
+	myTable += "<thead> <tr> <th>Rang</th> <th>Ville</th> <th>Departement</th> <th>Region</th>  </tr> </thead>";
+	myTable += "<tbody>";
 
-    	myTable += "<tr style=\"cursor:pointer;\" onclick=\"recupLigneCliqueListe('" + myArray[i][1] + "')\">";
+	for (var i=0; i<myArray.length; i++){
 
-    	for (var j=0; j<myArray[i].length; j++) {
-    		myTable+="<td>" + myArray[i][j] + "</td>";
-    	}
+		myTable += "<tr style=\"cursor:pointer;\" onclick=\"recupLigneCliqueListe('" + myArray[i][1] + "')\">";
 
-    	myTable += "</tr>";
-    }
-    
-    myTable += "</tbody> </table>";
-   
-   
-    document.getElementById('listeVilles').innerHTML = myTable;
-    document.getElementById("containerListe").style.display = "none";
+		for (var j=0; j<myArray[i].length; j++) {
+			myTable+="<td>" + myArray[i][j] + "</td>";
+		}
+
+		myTable += "</tr>";
+	}
+
+	myTable += "</tbody> </table>";
+
+
+	document.getElementById('listeVilles').innerHTML = myTable;
 
 }
 function deleteTableau(){
@@ -179,22 +178,20 @@ function show() {
 	document.getElementById("pac-input2").disabled = false;
 }
 
-function comparaison(){
-	
-	if(document.getElementById("pac-input2").disabled){
-		document.getElementById("pac-input2").disabled = false;
-	}
-	else{
-		document.getElementById("pac-input2").disabled = true;
-	}
-}
+
 
 function comparaison2(){
-    if(document.getElementById("comparaison").checked)
-    	document.getElementById("pac-input2").disabled = false;
-    else
-    	document.getElementById("pac-input2").disabled = true;
- }
+	
+	if(document.getElementById("comparaison").checked){
+		document.getElementById("pac-input2").disabled = false;
+	 document.getElementById("pac-input2").name=document.getElementById("pac-input2").value;}
+	else{
+		document.getElementById("pac-input2").disabled = true;
+		document.getElementById("pac-input2").value=  document.getElementById("pac-input2").name;
+	    document.getElementById("pac-input2").name="ville2";
+}
+
+}
 
 
 function decision(){
@@ -202,10 +199,10 @@ function decision(){
 		document.getElementById("justePrDecision").style.display = "none";
 		document.getElementById("comparer").style.display = "";
 	}
-    else{
-    	document.getElementById("justePrDecision").style.display = "";
-    	document.getElementById("comparer").style.display = "none";
-    }
+	else{
+		document.getElementById("justePrDecision").style.display = "";
+		document.getElementById("comparer").style.display = "none";
+	}
 }
 
 
