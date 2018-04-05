@@ -181,17 +181,8 @@ function show() {
 	document.getElementById("pac-input2").disabled = false;
 }
 
-function comparaison(){
-	
-	if(document.getElementById("pac-input2").disabled){
-		document.getElementById("pac-input2").disabled = false;
-	}
-	else{
-		document.getElementById("pac-input2").disabled = true;
-	}
-}
 
-function comparaison2(){
+function comparaison(){
     if(document.getElementById("comparaison").checked)
     	document.getElementById("pac-input2").disabled = false;
     else
