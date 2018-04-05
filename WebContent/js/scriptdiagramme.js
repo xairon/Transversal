@@ -187,7 +187,7 @@ function show() {
 }
 
 
-function comparaison(){
+function comparaison2(){
     if(document.getElementById("comparaison").checked)
     	document.getElementById("pac-input2").disabled = false;
     else{

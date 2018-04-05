@@ -18,13 +18,13 @@ public class ServletAPIform extends HttpServlet {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 2638098469236376682L;
+
 	HashMap <String,ArrayList> jsonh = new HashMap<String,ArrayList>();
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//("1", "villeA", "37", "3", "14"); pour la liste
-
+		 response.setContentType("text/html;charset=UTF-8");
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
 		ArrayList<String> nomA = new ArrayList<String>();
@@ -41,11 +41,8 @@ public class ServletAPIform extends HttpServlet {
 		arg = body.split(";");
 
 
-
-
-
 		for(int i =1;i<arg.length;i+=2) {
-			if(!arg[i].contains("false")) {
+			if(!arg[i].contains("false")&&!arg[i].contains("0")) {
 				valeurA.add(arg[i]);
 				nomA.add(arg[i-1]);
 			}
@@ -171,7 +168,7 @@ public class ServletAPIform extends HttpServlet {
 			default:
 				break;
 			}
-			System.out.println("pourquoi tu boucles pas");
+			
 			System.out.println(tabnom[i]);
 		}
 		jsonh.put("value", value);

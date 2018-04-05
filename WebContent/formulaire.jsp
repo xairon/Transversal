@@ -7,7 +7,7 @@
 </div>
 
 
-<input id="comparaison" type="checkbox" onchange="comparaison()" data-on="Comparaison" data-off="Sélection" data-toggle="toggle" data-onstyle="info" data-offstyle="info">
+<input id="comparaison" type="checkbox" onchange="comparaison2()" data-on="Comparaison" data-off="Sélection" data-toggle="toggle" data-onstyle="info" data-offstyle="info">
 <br/>
 <input id="pac-input" class="controls" type="text" name="ville1" value
 placeholder="Enter a location"> 

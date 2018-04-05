@@ -1,5 +1,8 @@
 function sendform()
 {
+	document.getElementById('infosTexte1').innerHTML = '';
+
+	document.getElementById('infosTexte2').innerHTML = '';
 var etude = new Array;
 	
 	etude.push(document.getElementById("etudes-nombre").name +";"+
@@ -106,7 +109,7 @@ var etude = new Array;
 		xhr.send(body);
 	}
 	function f(response) {
-		
+
 		liste(response);
 		diagramme(response);
 		
