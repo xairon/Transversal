@@ -19,10 +19,14 @@ html, body {
 }
 
 a[id*="onglet"]{
-	width: 100px;
+	width: 150px;
 	text-align: center;
 	background-color: #6cc1c6;
 	color: black;
+}
+
+p[id="legendeOption"]{
+	font-size: 12px;
 }
 
 /*menu*/

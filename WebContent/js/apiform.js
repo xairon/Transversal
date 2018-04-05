@@ -112,7 +112,7 @@ var etude = new Array;
 
 		liste(response);
 		diagramme(response);
-		
+		affichageTexteGraphe(response);
 
 
 	}

@@ -96,6 +96,7 @@ if(v1==true&&v2==true){
         		
 }
 function affichageTexteGraphe(response){
+	deleteAffichageTexteGraphe();
 	test =  JSON.parse(response);
     var value2 = test.value2;
     var value = test.value;
@@ -188,13 +189,14 @@ function show() {
 
 
 function comparaison2(){
-    if(document.getElementById("comparaison").checked)
-    	document.getElementById("pac-input2").disabled = false;
-    else{
-    	document.getElementById("pac-input2").disabled = true;
-    	
-    }
-    
+	if(document.getElementById("comparaison").checked){
+		document.getElementById("pac-input2").disabled = false;
+	 document.getElementById("pac-input2").name=document.getElementById("pac-input2").value;}
+	else{
+		document.getElementById("pac-input2").disabled = true;
+		document.getElementById("pac-input2").value=  document.getElementById("pac-input2").name;
+	    document.getElementById("pac-input2").name="ville2";
+	}  
  }
 
 
@@ -211,6 +213,25 @@ function decision(){
 
 
 /* liste <=> map */
+
+function afficheFormulaire(){
+	afficheInfosVilles();
+}
+
+function afficheInfosVilles(){
+	document.getElementById("boutonTop5").style.display = "none";
+	document.getElementById("boutonInfosVilles").style.display = "";
+	document.getElementById("containerInfosVilles").style.display = "";
+	document.getElementById("legendeOption").style.display = "";
+}
+
+function afficheTop5(){
+	document.getElementById("boutonTop5").style.display = "";
+	document.getElementById("boutonInfosVilles").style.display = "none";
+	document.getElementById("containerInfosVilles").style.display = "none";
+	document.getElementById("legendeOption").style.display = "none";
+}
+
 function afficheCarte(){
 	document.getElementById("containerListe").style.display = "none";
 	document.getElementById("containerCarte").style.display = "";
@@ -233,6 +254,7 @@ $(document).ready(function(){
 	$("#collapse2").collapse('hide');
 	$("#collapse3").collapse('hide');
 	$("#collapse4").collapse('hide');
+	afficheTop5();
 });
 
 function ouvreEtudes(){

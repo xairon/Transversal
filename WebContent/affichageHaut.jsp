@@ -4,8 +4,8 @@
 	
 
 		<ul class="nav nav-tabs margeZero">
-			<li class="pull-right"><a id="onglet1" data-toggle="tab" href="#ongletListe">Liste</a></li>
-			<li class="active pull-right"><a id="onglet2" data-toggle="tab" href="#ongletCarte">Carte</a></li>
+			<li class="pull-right"><a id="onglet3" data-toggle="tab" href="#ongletListe">Liste</a></li>
+			<li class="active pull-right"><a id="onglet4" data-toggle="tab" href="#ongletCarte">Carte</a></li>
 		</ul>
 
 		<div class="tab-content">

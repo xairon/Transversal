@@ -44,7 +44,6 @@
 <body>
 <body onload="initialize()">
 
-
 	<div class="navbar navbar-default margeZero navBarPrincipale">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -57,7 +56,7 @@
 	</div>
 
 
-
+<br/>
 
 	<div class="col-md-3">
 
