@@ -67,33 +67,108 @@ function diagramme(response){
 
 	if(v1==true&&v2==false){
 		setTimeout(function(){
-			for(var i = 0;i<value.length;i++){
-				config.data.datasets[0].data.push(value[i]);
+			
+				config.data.datasets[0].data.push(value[0]);
+				config.data.datasets[0].data.push(value[1]);
+				config.data.datasets[0].data.push(value[2]);
 
-			}
-			for(var j = 0;j<name.length;j++){
-				config.data.labels.push(name[j]);
+		
+			
+				config.data.labels.push(name[0]);
+				config.data.labels.push(name[1]);
+				config.data.labels.push(name[2]);
 
 
-			}
+			
 			myChart.update();
 		}, 1000)	
 	}
 	if(v1==true&&v2==true){
 		setTimeout(function(){
-			for(var i = 0;i<value.length;i++){
-				config.data.datasets[0].data.push(value[i]);
-				config.data.datasets[0].data.push(value2[i]);
-			}
-			for(var j = 0;j<name.length;j++){
-				config.data.labels.push(name[j]);
-				config.data.labels.push(name2[j]);
+			
+				config.data.datasets[0].data.push(value[0]);
+				config.data.datasets[0].data.push(value2[0]);
+				config.data.datasets[0].data.push(value[1]);
+				config.data.datasets[0].data.push(value2[1]);
+				config.data.datasets[0].data.push(value[2]);
+				config.data.datasets[0].data.push(value2[2]);
+			
+			
+				config.data.labels.push(name[0]);
+				config.data.labels.push(name2[0]);
+				config.data.labels.push(name[1]);
+				config.data.labels.push(name2[1]);
+				config.data.labels.push(name[2]);
+				config.data.labels.push(name2[2]);
 
-			}
+			
 			myChart.update();
 		}, 1000)
 	}
 
+}
+function diagramme2(response){
+	affichageTexteGraphe(response);
+	test =  JSON.parse(response);
+	var v1=true;
+	var v2=true;
+	var value2 = test.value2;
+	var value = test.value;
+	var name = test.name;
+	var name2 = test.name2;
+	console.log(test);
+	console.log(value);
+	console.log(value2);
+	console.log(name);
+	console.log(name2);
+
+	if(value.length==0&&name.length==0) 
+		v1 = false;
+	if(value2.length==0&&name2.length==0) 
+		v2 = false;
+
+	console.log(v1);
+	console.log(v2);
+	var marksData = {
+			  labels: ["Nombre d'étudiants", "taux de chômage", "Superficie"],
+			  datasets: [{
+			    label: "Ville A",
+			    backgroundColor: "rgba(200,0,0,0.2)",
+			    data: []
+			  }, {
+			    label: "Ville B",
+			    backgroundColor: "rgba(0,0,200,0.2)",
+			    data: []
+			  }]
+			};
+
+	
+	
+	var ctx = document.getElementById("histogramme");
+	var radarChart = new Chart(ctx, {
+		  type: 'radar',
+		  data: marksData
+		});
+
+	if(v1==true&&v2==false){
+		
+			for(var i = 0;i<3;i++){
+				marksData.datasets[0].data.push(value[i]);
+				
+
+			}
+			myBarChart.update();
+			
+	}
+	if(v1==true&&v2==true){
+		for(var i = 0;i<3;i++){
+			marksData.datasets[0].data.push(value[i]);
+			marksData.datasets[1].data.push(value2[i]);
+			
+
+		}
+		myBarChart.update();
+	}
 }
 function affichageTexteGraphe(response){
 
