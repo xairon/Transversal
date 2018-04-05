@@ -19,7 +19,7 @@ public class ServletAPIjs extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		 response.setContentType("text/html;charset=UTF-8");
 
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
@@ -33,8 +33,8 @@ public class ServletAPIjs extends HttpServlet {
 		String arg[];
 
 
-		String ville1;
-		String ville2;
+		String ville1 ="ville1";
+		String ville2="ville2";
 		boolean v1=false;
 		boolean v2=false;
 

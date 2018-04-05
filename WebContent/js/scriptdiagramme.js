@@ -96,6 +96,7 @@ function diagramme(response){
 
 }
 function affichageTexteGraphe(response){
+
 	test =  JSON.parse(response);
 	var value2 = test.value2;
 	var value = test.value;

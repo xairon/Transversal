@@ -24,7 +24,7 @@ public class ServletAPIform extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//("1", "villeA", "37", "3", "14"); pour la liste
-
+		 response.setContentType("text/html;charset=UTF-8");
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
 		ArrayList<String> nomA = new ArrayList<String>();

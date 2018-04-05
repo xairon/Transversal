@@ -1,5 +1,6 @@
 function sendselec()
 {
+	
 var etude = new Array;
 	
 	etude.push(document.getElementById("etudes-nombre").name +";"+
@@ -90,7 +91,12 @@ var etude = new Array;
 	body= 	document.getElementById("pac-input").name+";"+document.getElementById("pac-input2").name+";"
 	+etude+population+territoire+entreprise; 
 		
+	document.getElementById('infosTexte1').innerHTML = '';
 
+	//document.getElementById('pac-input').name="ville1";
+
+	//document.getElementById('pac-input2').name="ville2";
+	document.getElementById('infosTexte2').innerHTML = '';
 
 
 	let server_domain = 'localhost:8080';
@@ -108,7 +114,7 @@ var etude = new Array;
 		xhr.send(body);
 	}
 	function f(response) {
-		
+
 		liste(response);
 		diagramme(response);
 		
