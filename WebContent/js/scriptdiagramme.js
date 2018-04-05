@@ -1,5 +1,6 @@
-function diagramme(response){
 
+function diagramme(response){
+	affichageTexteGraphe(response);
 	test =  JSON.parse(response);
 var v1=true;
 var v2=true;
@@ -94,6 +95,46 @@ if(v1==true&&v2==true){
 }
         		
 }
+function affichageTexteGraphe(response){
+	test =  JSON.parse(response);
+    var value2 = test.value2;
+    var value = test.value;
+     var name = test.name;
+     
+	// je sais pas comment ça arrivera, donc je t'ai mis 2 façons de les créer, donc comme ça t'arrange
+	// (en espérant qu'au moins une te conviennes ^^')
+	
+	// valeurs tests
+	var nomDesAttributs = test.name;
+	var valeursTexte1 = test.value;
+	var valeursTexte2 = test.value2;
+	console.log("testafftexte");
+	// création semi-automatique du texte (1er texte)
+	// avec un ptit rappel html, <br/> pr sauter une ligne, <b> pr mettre en gras, yeah 8)
+	var texte1 = "";
+	for (i = 0; i < valeursTexte1.length; i++) {
+		if(i==0)
+			texte1 += "<br />";
+		texte1 += "<b>" + nomDesAttributs[i] +  " :</b> " + valeursTexte1[i] + " <br />";
+	}
+	// création auto du texte (2eme texte)
+	var texte2 = "";
+	for (i = 0; i < valeursTexte2.length; i++) {
+		if(i==0)
+			texte2 += "<br />";
+		texte2 += "<b>" + nomDesAttributs[i] +  " :</b> " + valeursTexte2[i] + " <br />";
+	}
+	
+	// mets le texte seulement si ya des choses à mettre... et en même tps, si ya rien à mettre
+	// il ne va rien afficher par défaut.... 
+	if(texte1 !== "")
+		document.getElementById('infosTexte1').innerHTML = texte1;
+	if(texte2 !== "")
+		document.getElementById('infosTexte2').innerHTML = texte2;
+}
+
+
+
 function liste(response){
 	deleteTableau();
 	test ="";
@@ -122,7 +163,7 @@ function liste(response){
    
    
     document.getElementById('listeVilles').innerHTML = myTable;
-    document.getElementById("containerListe").style.display = "none";
+
 }
 function deleteTableau(){
 	if(document.getElementById('tableauVilles') != null)
@@ -131,46 +172,6 @@ function deleteTableau(){
 function recupLigneCliqueListe(){
 	alert(arguments[0]);
 }
-
-
-
-function affichageTexteGraphe(){
-	
-	// je sais pas comment ça arrivera, donc je t'ai mis 2 façons de les créer, donc comme ça t'arrange
-	// (en espérant qu'au moins une te conviennes ^^')
-	
-	// valeurs tests
-	var nomDesAttributs = ["population", "chômage", "nombre étudiants", "superficie", "urbanité"];
-	var valeursTexte1 = ["3000", "30", "453", "100", "200"];
-	var valeursTexte2 = ["5000", "70", "679", "200", "300"];
-	
-	// création semi-automatique du texte (1er texte)
-	// avec un ptit rappel html, <br/> pr sauter une ligne, <b> pr mettre en gras, yeah 8)
-	var texte1 = "";
-	texte1 += "<br />";
-	texte1 += "<b>population :</b> " + valeursTexte1[0] + " <br />";
-	texte1 += "<b>chômage :</b> " + valeursTexte1[1] + " <br />";
-	texte1 += "<b>nombre étudiants :</b> " + valeursTexte1[2] + " <br />";
-	texte1 += "<b>superficie :</b> " + valeursTexte1[3] + " <br />";
-	texte1 += "<b>urbanité :</b> " + valeursTexte1[4] + " <br />";
-	 
-	// création auto du texte (2eme texte)
-	var texte2 = "";
-	for (i = 0; i < valeursTexte2.length; i++) {
-		if(i==0)
-			texte2 += "<br />";
-		texte2 += "<b>" + nomDesAttributs[i] +  " :</b> " + valeursTexte2[i] + " <br />";
-	}
-	
-	// mets le texte seulement si ya des choses à mettre... et en même tps, si ya rien à mettre
-	// il ne va rien afficher par défaut.... 
-	if(texte1 !== "")
-		document.getElementById('infosTexte1').innerHTML = texte1;
-	if(texte2 !== "")
-		document.getElementById('infosTexte2').innerHTML = texte2;
-}
-
-
 
 /* champ map */
 function hide() {

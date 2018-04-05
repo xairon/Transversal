@@ -19,18 +19,19 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="index.jsp">Plateforme</a>
+
+<div class="navbar navbar-default margeZero navBarPrincipale">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="login.jsp">Où étudier.com</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a title="boutonDroiteNavBar" href="PagePrincipale">Admin</a></li>
+			</ul>
 		</div>
-		<ul class="nav navbar-nav navbar-right">
-
-
-
-		</ul>
 	</div>
-	</nav>
+
+	
 
 	<div class="col-md-offset-4">
 		<h1>Où étudier.com</h1>
@@ -40,7 +41,7 @@
 		<div class="col-sm-7">
 			<div class="Container margeLeft">
 				<h2>Bienvenue sur cette magnifique plateforme</h2>
-				<h4>Bonjour et bienvenue !
+				<h4 id="texteBienvenue">Bonjour et bienvenue !
 					<br/>
 Famille, étudiants et enseignants nous avons la solution pour que vous puissiez trouver la ville idéale à votre situation. 
 Nous vous proposons une sélection des meilleures villes en France correspondant à vos désirs. Il existe également une fonctionnalité vous permettant de réaliser des comparatifs. Différents zonages et de nombreux critères sont accessibles, vous laissant une liberté durant vos recherches. 

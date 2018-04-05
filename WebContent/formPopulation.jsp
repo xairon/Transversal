@@ -1,7 +1,7 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
+	<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvrePopulation()">
 		<h4 class="panel-title">
-			<a data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvrePopulation()">Population</a>
+			<a>Population</a>
 		</h4>
 	</div>
 	<div id="collapse2" class="panel-collapse collapse interieurMenu in">
@@ -49,45 +49,6 @@
 					data-slider-value="2" data-slider-tooltip="hide" />
 
 			</div>
-
-
-
-<%-- 
-
-
-
-			<h5>Secteur</h5>
-
-			<%
-			String [] listeSecteursPop = {
-					"Agriculture",
-					"Industrie",
-					"Construction",
-					"Commerce et service",
-					"Commerce",
-					"Administration publique"
-					}; 
-		
-			for (int i = 0; i < listeSecteursPop.length; i++) {
-				String regroupementMotSepare[] = listeSecteursPop[i].split(" ");
-				String regroupementMotColle = "";
-				for (int j = 0; j < regroupementMotSepare.length; j++) {
-					if (j != 0)
-						regroupementMotColle += "_";
-					regroupementMotColle += regroupementMotSepare[j];
-				}
-			%>
-
-
-
-			<input type="checkbox"
-				id=<%="population-secteur-" + regroupementMotColle%>
-				name=<%="population-secteur-" + regroupementMotColle%>
-				value=<%=regroupementMotColle%>>
-			<%=listeSecteursPop[i]%><br>
-			<%} %>
- --%>
-
 
 
 		</div>

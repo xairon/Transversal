@@ -1,7 +1,7 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
+	<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvreEtudes()">
 		<h4 class="panel-title">
-			<a data-toggle="collapse" data-parent="#accordion" href="#" onclick="ouvreEtudes()">Etudes</a>
+			<a>Etudes</a>
 		</h4>
 	</div>
 	<div id="collapse1" class="panel-collapse collapse interieurMenu in">

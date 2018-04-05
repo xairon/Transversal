@@ -199,31 +199,7 @@ response.setStatus(200);
 	case"population-chomage": 
 
 	
-	
-	case"population-secteur-Agriculture": 
-
-	
-	
-	case"population-secteur-Industrie": 
-
-	
-	
-	case"population-secteur-Construction": 
-
-	
-	
-	case"population-secteur-Commerce_et_service": 
-
-	
-	
-	case"population-secteur-Commerce": 
-
-	
-	
-	case"population-secteur-Administration_publique": 
-
-	
-	
+		
 	case"territoire-orientation-Residentiel": 
 
 	
