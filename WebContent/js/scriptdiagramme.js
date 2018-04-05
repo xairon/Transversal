@@ -133,7 +133,12 @@ function affichageTexteGraphe(response){
 		document.getElementById('infosTexte2').innerHTML = texte2;
 }
 
-
+function deleteAffichageTexteGraphe(){
+	if(document.getElementById('infosTexte1') != null)
+		document.getElementById('infosTexte1').innerHTML = '';
+	if(document.getElementById('infosTexte2') != null)
+		document.getElementById('infosTexte2').innerHTML = '';
+}
 
 
 function liste(response){
@@ -185,8 +190,11 @@ function show() {
 function comparaison(){
     if(document.getElementById("comparaison").checked)
     	document.getElementById("pac-input2").disabled = false;
-    else
+    else{
     	document.getElementById("pac-input2").disabled = true;
+    	
+    }
+    
  }
 
 

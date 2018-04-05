@@ -53,6 +53,8 @@ placeholder="Enter a  second location">
 </div>
 
 
+<button id="#" onclick="deleteAffichageTexteGraphe()"name="test" class="btn">test</button>
+
 
 
 
