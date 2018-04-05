@@ -33,8 +33,9 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script type="text/javascript" src="js/api.js"></script>
-    <script type="text/javascript" src="js/scriptdiagramme.js"></script>
+<script type="text/javascript" src="js/apiform.js"></script>
+<script type="text/javascript" src="js/apiselection.js"></script>
+<script type="text/javascript" src="js/scriptdiagramme.js"></script>
 
 
 

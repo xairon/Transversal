@@ -30,6 +30,10 @@
         <servlet-name>ServletAPIjs</servlet-name>
         <servlet-class>transversal.ServletAPIjs</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAPIform</servlet-name>
+        <servlet-class>transversal.ServletAPIform</servlet-class>
+    </servlet>
     
         <servlet>
         <servlet-name>Formulaire</servlet-name>
@@ -41,8 +45,12 @@
 </servlet-mapping> 
     <servlet-mapping>
         <servlet-name>ServletAPIjs</servlet-name>
-        <url-pattern>/API</url-pattern>
-    </servlet-mapping> 
+        <url-pattern>/APIselec</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAPIform</servlet-name>
+        <url-pattern>/APIform</url-pattern>
+    </servlet-mapping>  
       <servlet-mapping>
         <servlet-name>inscription</servlet-name>
         <url-pattern>/Inscription</url-pattern>
