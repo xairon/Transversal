@@ -225,12 +225,14 @@ catch(Exception e)
 			name.add("Superficie ");
 			name.add("Département ");
 			name.add("Région ");
-		
+			name.add("Ville : ");
+			
 			value.add(Float.toString(taux1));//requête sur le chomage
 			value.add(Integer.toString(et1));//requête sur le nombre d'étudiant
 			value.add(Float.toString(superf1));//requête blabla
 			value.add(dep1);//requête sur blabla
 			value.add(reg1);//requête sur blabla
+			value.add(ville1);
 			liste.add("1"); //requête sur la meilleure ville son numéro de classement
 			liste.add(ville1);
 			liste.add(dep1); //requête sur le département
@@ -238,35 +240,39 @@ catch(Exception e)
 
 		}
 		if(v1==true&&v2==true) {
-
+			
 			name.add("taux de chômage ");
 			name.add("nombre d'étudiant ");
 			name.add("Superficie ");
 			name.add("Département ");
 			name.add("Région ");
-		
+			name.add("Ville : ");
+			
 			name2.add("taux de chômage ");
 			name2.add("nombre d'étudiant ");
 			name2.add("Superficie ");
 			name2.add("Département ");
 			name2.add("Région ");
-		
+			name2.add("Ville : ");
+			
 			value.add(Float.toString(taux1));//requête sur le chomage
 			value.add(Integer.toString(et1));//requête sur le nombre d'étudiant
 			value.add(Float.toString(superf1));//requête blabla
 			value.add(dep1);//requête sur blabla
 			value.add(reg1);//requête sur blabla
+			value.add(ville1);
 			liste.add("1"); //requête sur la meilleure ville son numéro de classement
 			liste.add(ville1);
 			liste.add(dep1); //requête sur le département
 			liste.add(reg1); //requête sur la région
 
-	
+			
 			value2.add(Float.toString(taux2));//requête sur le chomage
 			value2.add(Integer.toString(et2));//requête sur le nombre d'étudiant
 			value2.add(Float.toString(superf2));//requête blabla
 			value2.add(dep2);//requête sur blabla
 			value2.add(reg2);//requête sur blabla
+			value2.add(ville2);
 			liste2.add("2"); //requête sur la meilleure ville son numéro de classement
 			liste2.add(ville2);
 			liste2.add(dep2); //requête sur le département
