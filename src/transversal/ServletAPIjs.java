@@ -1,6 +1,11 @@
 package transversal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import DAO.Ville;
+
 
 public class ServletAPIjs extends HttpServlet {
 	HashMap <String,ArrayList> jsonh = new HashMap<>();
@@ -20,7 +27,7 @@ public class ServletAPIjs extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 response.setContentType("text/html;charset=UTF-8");
-
+		
 		ArrayList<String> name = new ArrayList<String>();
 		ArrayList<String> value = new ArrayList<String>();
 		ArrayList<String> nomA = new ArrayList<String>();
@@ -35,9 +42,21 @@ public class ServletAPIjs extends HttpServlet {
 
 		String ville1 ="ville1";
 		String ville2="ville2";
+		float superf1=0;
+		float superf2 = 0;
+		String dep1="";
+		String dep2="";
+		String reg1="";
+		String reg2="";
+		float taux1=0;
+		float taux2=0;
+	int etuslider = 0;
+		int et1=0;;
+		int et2=0;
 		boolean v1=false;
 		boolean v2=false;
-
+		
+		  
 		body = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));	
 		arg = body.split(";");
 
@@ -45,6 +64,141 @@ public class ServletAPIjs extends HttpServlet {
 		ville2 = arg[1];
 System.out.println(ville1);
 System.out.println(ville2);
+/*try{
+
+	
+	 //loading drivers for mysql
+   Class.forName("com.mysql.jdbc.Driver");
+
+//creating connection with the database 
+   Connection con=DriverManager.getConnection
+                  ("jdbc:mysql://localhost:3306/projet","root","root");
+	
+       
+       PreparedStatement ps =con.prepareStatement
+                           ("select superf from ville where libgeo=?");
+       ps.setString(1, ville1);
+      
+       ResultSet rs =ps.executeQuery();
+       if(rs.next()) 
+      superf1 = rs.getFloat(1);
+    
+}
+
+catch(Exception e)
+    {
+        e.printStackTrace();
+    }*/
+try{
+
+	
+	 //loading drivers for mysql
+    Class.forName("com.mysql.jdbc.Driver");
+
+ //creating connection with the database 
+    Connection con=DriverManager.getConnection
+                   ("jdbc:mysql://localhost:3306/projet","root","root");
+	
+        
+        PreparedStatement ps =con.prepareStatement
+                            ("select superf from ville where libgeo=?");
+        ps.setString(1, ville1);
+       
+        ResultSet rs =ps.executeQuery();
+        if(rs.next()) 
+       superf1 = rs.getFloat(1);
+        ps =con.prepareStatement
+                ("select rstat_dep.LIBGEO from ville, rstat_dep where ville.LIBGEO= ? and ville.DEP = rstat_dep.CODGEO;");
+ps.setString(1, ville1);
+
+ rs =ps.executeQuery();
+if(rs.next()) 
+dep1 = rs.getString(1);
+ ps =con.prepareStatement
+("select rstat_reg.LIBGEO from ville, rstat_reg where ville.LIBGEO= ? and ville.reg = rstat_reg.CODGEO;");
+ps.setString(1, ville1);
+
+ rs =ps.executeQuery();
+if(rs.next()) 
+	reg1 = rs.getString(1);
+
+ ps =con.prepareStatement
+("select  eff_moy from etude where geo_nom = ?;");
+ps.setString(1, ville1);
+
+ rs =ps.executeQuery();
+if(rs.next()) 
+et1 = rs.getInt(1);
+ps =con.prepareStatement
+("SELECT (P09_CHOM1564 / (P09_ACT1564 + P09_CHOM1564))*100 from ville, populations where ville.libgeo = ? and ville.codgeo = populations.codgeo;");
+ps.setString(1, ville1);
+
+ rs =ps.executeQuery();
+if(rs.next()) 
+taux1 = rs.getInt(1);
+       
+}
+
+catch(Exception e)
+     {
+         e.printStackTrace();
+     }
+
+	try{
+
+		
+		 //loading drivers for mysql
+	    Class.forName("com.mysql.jdbc.Driver");
+
+	 //creating connection with the database 
+	    Connection con=DriverManager.getConnection
+	                   ("jdbc:mysql://localhost:3306/projet","root","root");
+		
+	        
+	        PreparedStatement ps =con.prepareStatement
+	                            ("select superf from ville where libgeo=?");
+	        ps.setString(1, ville2);
+	       
+	        ResultSet rs =ps.executeQuery();
+	        if(rs.next()) 
+	       superf2 = rs.getFloat(1);
+	        ps =con.prepareStatement
+	                ("select rstat_dep.LIBGEO from ville, rstat_dep where ville.LIBGEO= ? and ville.DEP = rstat_dep.CODGEO;");
+	ps.setString(1, ville2);
+
+	 rs =ps.executeQuery();
+	if(rs.next()) 
+	dep2 = rs.getString(1);
+	 ps =con.prepareStatement
+	("select rstat_reg.LIBGEO from ville, rstat_reg where ville.LIBGEO= ? and ville.reg = rstat_reg.CODGEO;");
+	ps.setString(1, ville2);
+
+	 rs =ps.executeQuery();
+	if(rs.next()) 
+		reg2 = rs.getString(1);
+	
+	 ps =con.prepareStatement
+	("select  eff_moy from etude where geo_nom = ?;");
+	ps.setString(1, ville2);
+
+	 rs =ps.executeQuery();
+	if(rs.next()) 
+	et2 = rs.getInt(1);
+	ps =con.prepareStatement
+	("SELECT (P09_CHOM1564 / (P09_ACT1564 + P09_CHOM1564))*100 from ville, populations where ville.libgeo = ? and ville.codgeo = populations.codgeo;");
+	ps.setString(1, ville2);
+
+	 rs =ps.executeQuery();
+	if(rs.next()) 
+	taux2 = rs.getInt(1);
+	       
+	}
+
+	catch(Exception e)
+	     {
+	         e.printStackTrace();
+	     }
+
 		if(ville1.equals("ville1"))
 			v1=false;
 		else v1 =true;
@@ -65,52 +219,58 @@ System.out.println(ville2);
 		if(tabnom.length==0) {
 
 		if(v1==true&&v2==false) {
-			name.add("Population "); 
+			
 			name.add("taux de chomage ");
 			name.add("nombre d'étudiant ");
 			name.add("Superficie ");
-			name.add("urbanité ");
-			value.add("3000");//requête sur la population
-			value.add("30");//requête sur le chomage
-			value.add("453");//requête sur le nombre d'étudiant
-			value.add("100");//requête blabla
-			value.add("200");//requête sur blabla
+			name.add("Département ");
+			name.add("Région ");
+		
+			value.add(Float.toString(taux1));//requête sur le chomage
+			value.add(Integer.toString(et1));//requête sur le nombre d'étudiant
+			value.add(Float.toString(superf1));//requête blabla
+			value.add(dep1);//requête sur blabla
+			value.add(reg1);//requête sur blabla
 			liste.add("1"); //requête sur la meilleure ville son numéro de classement
 			liste.add(ville1);
-			liste.add("Indre"); //requête sur le département
-			liste.add("Centre"); //requête sur la région
+			liste.add(dep1); //requête sur le département
+			liste.add(reg1); //requête sur la région
 
 		}
 		if(v1==true&&v2==true) {
-			name.add("Population ");
-			name.add("taux de chomage ");
-			name.add("nombre d'etudiant ");
+
+			name.add("taux de chômage ");
+			name.add("nombre d'étudiant ");
 			name.add("Superficie ");
-			name.add("urbanite ");
-			name2.add("Population ");
-			name2.add("taux de chomage ");
-			name2.add("nombre d'etudiant v2");
-			name2.add("Superficie v2");
-			name2.add("urbanite v2");
-			value.add("3000");//requête sur la population
-			value.add("30");//requête sur le chomage
-			value.add("453");//requête sur le nombre d'étudiant
-			value.add("100");//requête blabla
-			value.add("200");//requête sur blabla
+			name.add("Département ");
+			name.add("Région ");
+		
+			name2.add("taux de chômage ");
+			name2.add("nombre d'étudiant ");
+			name2.add("Superficie ");
+			name2.add("Département ");
+			name2.add("Région ");
+		
+			value.add(Float.toString(taux1));//requête sur le chomage
+			value.add(Integer.toString(et1));//requête sur le nombre d'étudiant
+			value.add(Float.toString(superf1));//requête blabla
+			value.add(dep1);//requête sur blabla
+			value.add(reg1);//requête sur blabla
 			liste.add("1"); //requête sur la meilleure ville son numéro de classement
 			liste.add(ville1);
-			liste.add("Indre"); //requête sur le département
-			liste.add("Centre"); //requête sur la région
+			liste.add(dep1); //requête sur le département
+			liste.add(reg1); //requête sur la région
 
-			value2.add("3000");//requête sur la population
-			value2.add("30");//requête sur le chomage
-			value2.add("453");//requête sur le nombre d'étudiant
-			value2.add("100");//requête blabla
-			value2.add("200");//requête sur blabla
-			liste2.add("1"); //requête sur la meilleure ville son numéro de classement
+	
+			value2.add(Float.toString(taux2));//requête sur le chomage
+			value2.add(Integer.toString(et2));//requête sur le nombre d'étudiant
+			value2.add(Float.toString(superf2));//requête blabla
+			value2.add(dep2);//requête sur blabla
+			value2.add(reg2);//requête sur blabla
+			liste2.add("2"); //requête sur la meilleure ville son numéro de classement
 			liste2.add(ville2);
-			liste2.add("Indre"); //requête sur le département
-			liste2.add("Centre"); //requête sur la région
+			liste2.add(dep2); //requête sur le département
+			liste2.add(reg2); //requête sur la région
 
 		}
 
@@ -119,63 +279,62 @@ System.out.println(ville2);
 		for(int i =0;i<tabnom.length;i++) 
 		{
 			switch(tabnom[i]) {
-			case "etudes-nombre": name.add("Nombre d'étudiant");value.add("2000");
+			case "etudes-nombre": //etuslider = valeurA[i];
+
+			case "Universite": 
+			break;
+			case "ecoles_paramedicales_et_sociales": 
 			break;
 
-			case "Universite": name.add("Universités");value.add("8");
-			break;
-			case "ecoles_paramedicales_et_sociales": name.add("écoles paramédicales et sociales");value.add("5");
-			break;
-
-			case "ecoles_juridiques_et_administratives": name.add("p");value.add("p");
-			break;
-
-
-			case "ecoles_superieures_art_et_culture": name.add("pp");value.add("pp");
+			case "ecoles_juridiques_et_administratives": 
 			break;
 
 
-			case "ecole_de_commerce,_gestion_et_comptabilite": name.add("ppp");value.add("ppp");
+			case "ecoles_superieures_art_et_culture": 
 			break;
 
 
-			case "Formations_ingenieurs": name.add("a");value.add("a");
+			case "ecole_de_commerce,_gestion_et_comptabilite": 
 			break;
 
 
-			case "Section_de_techniciens_superieurs_et_assimiles": name.add("aa");value.add("aa");
+			case "Formations_ingenieurs": 
 			break;
 
 
-			case "Universite_de_technologie": name.add("aaa");value.add("aaa");
+			case "Section_de_techniciens_superieurs_et_assimiles":
 			break;
 
 
-			case "Grands_etablissement_MENESR": name.add("d");value.add("d");
-
-			break;
-
-			case "ecoles_normales_superieures": name.add("dd");value.add("dd");
-
-			break;
-
-			case "Instituts_nationaux_polytechniques": name.add("ddd");value.add("ddd");
+			case "Universite_de_technologie": 
 			break;
 
 
-			case "ESPE": name.add("c");value.add("c");
-			break;
-
-
-			case "Classes_preparatoires_aux_grandes_ecoles_(CPGE)": name.add("cc");value.add("cc");
+			case "Grands_etablissement_MENESR": 
 
 			break;
 
-			case "etudes-secteur-public": name.add("ccc");value.add("ccc");
+			case "ecoles_normales_superieures":
+
+			break;
+
+			case "Instituts_nationaux_polytechniques": 
 			break;
 
 
-			case "etudes-secteur-prive": name.add("j");value.add("j");
+			case "ESPE": 
+			break;
+
+
+			case "Classes_preparatoires_aux_grandes_ecoles_(CPGE)":
+
+			break;
+
+			case "etudes-secteur-public":
+			break;
+
+
+			case "etudes-secteur-prive": 
 			break;
 
 			/*
@@ -255,5 +414,8 @@ System.out.println(ville2);
 		out = response.getWriter();
 		out.println(json);
 	}
+
+
+	
 
 }
